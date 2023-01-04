@@ -1,0 +1,14 @@
+{
+    "name": "ProjectCatch.Mons.Data",
+    "rootNamespace": "ProjectCatch.Mons.Data",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

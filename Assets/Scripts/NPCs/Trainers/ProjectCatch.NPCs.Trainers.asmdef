@@ -1,0 +1,17 @@
+{
+    "name": "ProjectCatch.NPCs.Trainers",
+    "rootNamespace": "ProjectCatch.NPCs.Trainers",
+    "references": [
+        "GUID:cde22487e0af5324788b2ba92c2f64e2",
+        "GUID:16012e960d854b14693b5287d2ec1f15"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

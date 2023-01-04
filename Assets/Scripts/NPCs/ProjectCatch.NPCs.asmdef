@@ -1,0 +1,16 @@
+{
+    "name": "ProjectCatch.NPCs",
+    "rootNamespace": "ProjectCatch.NPCs",
+    "references": [
+        "GUID:2407d42f85d035a47badf41f24763e04"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
