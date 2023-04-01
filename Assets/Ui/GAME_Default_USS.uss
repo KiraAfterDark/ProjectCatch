@@ -1,0 +1,12 @@
+.label {
+    font-size: 12px;
+    -unity-font-style: normal;
+    color: rgb(0, 0, 0);
+}
+
+.dialog {
+    font-size: 64px;
+    -unity-font-style: normal;
+    color: rgb(0, 0, 0);
+}
+

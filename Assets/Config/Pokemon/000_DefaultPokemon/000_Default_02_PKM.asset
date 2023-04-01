@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d14a5e706ed6a0740979514d8310d201, type: 3}
+  m_Name: 000_Default_02_PKM
+  m_EditorClassIdentifier: 
+  dexNumber:
+    national: 0
+  name: Default Pokemon 02
+  typeOne: 0
+  typeTwo: 18
+  captureRate: 50
+  model: {fileID: 816037609610940670, guid: fe8f6b951a761284394a5f721c677599, type: 3}
+  evolutions: []
+  attacks:
+  - {fileID: 11400000, guid: 2fa1fe267161dbd489da9c86d7793a56, type: 2}
+  - {fileID: 11400000, guid: 5bd5eb41e0727384badbd0ad3a9af91b, type: 2}
+  abilities: 
+  baseStats:
+    hp: 10
+    attack: 10
+    defense: 10
+    specialAttack: 10
+    specialDefense: 10
+    speed: 10

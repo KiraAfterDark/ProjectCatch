@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Ui/Battle/BTL_Default_USS.uss?fileID=7433441132597879392&amp;guid=841c44af0758c9c4080f9d587fceb57e&amp;type=3#BTL_Default_USS" />
+    <ui:VisualElement name="BTL_PokemonInfo_UI" class="pokemon_info" style="flex-grow: 0; align-items: stretch; flex-shrink: 0;">
+        <ui:VisualElement name="pokemon_info_container" style="flex-grow: 0; background-color: rgb(255, 255, 255); align-items: flex-end; justify-content: space-between; align-self: stretch; flex-direction: row; -unity-background-image-tint-color: rgb(255, 255, 255); height: auto; flex-shrink: 0; width: auto; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+            <ui:Label tabindex="-1" text="[pokemon name]" display-tooltip-when-elided="true" name="pokemon_name_text" class="pokemon_name" />
+            <ui:Label tabindex="-1" text="Lvl." display-tooltip-when-elided="true" name="pokemon_level" class="pokemon_level" />
+            <ui:Label tabindex="-1" text="[000]" display-tooltip-when-elided="true" name="pokemon_level_text" class="subheader pokemon_level" />
+        </ui:VisualElement>
+        <ui:VisualElement name="spacer_line" style="flex-grow: 0; background-color: rgb(255, 255, 255); -unity-background-image-tint-color: rgb(255, 255, 255); margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px; height: 5px; flex-shrink: 0;" />
+        <ui:VisualElement name="healthbar_container" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px; height: 35px; flex-shrink: 0;">
+            <ui:VisualElement name="health_background" style="flex-grow: 1; background-color: rgb(58, 58, 58); min-width: auto; min-height: auto;">
+                <ui:VisualElement name="health_forground" style="flex-grow: 1; background-color: rgb(0, 255, 0); width: 70%; max-width: 100%; min-width: 0;">
+                    <ui:VisualElement name="text" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:Label tabindex="-1" text="000" display-tooltip-when-elided="true" name="current_health_text" class="healthbar" style="-unity-font: url(&apos;project://database/Assets/Resources/LiberationSans.ttf?fileID=12800000&amp;guid=e3265ab4bf004d28a9537516768c1c75&amp;type=3#LiberationSans&apos;); font-size: 24px; align-items: stretch; -unity-text-align: middle-left; color: rgb(255, 255, 255); -unity-font-style: bold;" />
+                        <ui:Label tabindex="-1" text="/" display-tooltip-when-elided="true" name="separator" class="healthbar" style="font-size: 24px; -unity-font: url(&apos;project://database/Assets/Resources/LiberationSans.ttf?fileID=12800000&amp;guid=e3265ab4bf004d28a9537516768c1c75&amp;type=3#LiberationSans&apos;); -unity-text-align: middle-left; color: rgb(255, 255, 255); -unity-font-style: bold;" />
+                        <ui:Label tabindex="-1" text="000" display-tooltip-when-elided="true" name="max_health_text" class="healthbar" style="font-size: 24px; -unity-font: url(&apos;project://database/Assets/Resources/LiberationSans.ttf?fileID=12800000&amp;guid=e3265ab4bf004d28a9537516768c1c75&amp;type=3#LiberationSans&apos;); -unity-text-align: middle-left; color: rgb(255, 255, 255); -unity-font-style: bold;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
