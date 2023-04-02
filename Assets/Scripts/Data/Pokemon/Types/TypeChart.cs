@@ -2,7 +2,7 @@ using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace ProjectMaster.Data.Pokemon.Types
+namespace ProjectCatch.Data.Pokemon.Types
 {
     [CreateAssetMenu(menuName = "Config/Type Chart", fileName = "New Type Chart")]
     public class TypeChart : SerializedScriptableObject

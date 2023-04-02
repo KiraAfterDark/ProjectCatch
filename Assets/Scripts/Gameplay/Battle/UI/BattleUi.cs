@@ -1,16 +1,18 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Fsi.Runtime;
-using ProjectMaster.Battle.Actions;
-using ProjectMaster.Gameplay.Battle.Ui;
-using ProjectMaster.Input;
-using ProjectMaster.Ui;
+using ProjectCatch.Battle.Actions;
+using ProjectCatch.Gameplay.Battle.Ui;
+using ProjectCatch.Gameplay.Pokemon;
+using ProjectCatch.Input;
+using ProjectCatch.Ui;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace ProjectMaster.Battle.Ui
+namespace ProjectCatch.Battle.Ui
 {
-    public class TrainerBattleUi : MbSingleton<TrainerBattleUi>
+    public class BattleUi : MbSingleton<BattleUi>
     {
         private PlayerInput playerInput;
 
@@ -46,7 +48,7 @@ namespace ProjectMaster.Battle.Ui
         [SerializeField]
         private string trainerWinString = "{0} wins the battle.";
 
-        [Title("Healthbars")]
+        [Title("Health bars")]
 
         [SerializeField]
         private BattleHealthbar playerHealthbar;
@@ -216,6 +218,15 @@ namespace ProjectMaster.Battle.Ui
             {
                 playerHealthCanvas.gameObject.SetActive(false);
             }
+        }
+        
+        #endregion
+        
+        #region PokemonSelect
+
+        public void SelectPokemon(List<PokemonInstance> party, Action<PokemonInstance> callback)
+        {
+            
         }
         
         #endregion

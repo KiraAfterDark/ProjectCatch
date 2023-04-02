@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ProjectMaster.Gameplay.Ui
+namespace ProjectCatch.Gameplay.Ui
 {
     public class PokemonSelectPopup : MonoBehaviour
     {

@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace ProjectMaster.Battle.Ui
+namespace ProjectCatch.Battle.Ui
 {
     public class BattleText : MonoBehaviour
     {

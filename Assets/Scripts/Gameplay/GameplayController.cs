@@ -1,9 +1,9 @@
 using Fsi.Runtime;
-using ProjectMaster.Data.Pokemon.Types;
+using ProjectCatch.Data.Pokemon.Types;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace ProjectMaster.Gameplay
+namespace ProjectCatch.Gameplay
 {
     public class GameplayController : MbSingleton<GameplayController>
     {

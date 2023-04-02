@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace ProjectMaster
+namespace ProjectCatch
 {
     [CreateAssetMenu(menuName = "Text Sequence", fileName = "New Text Sequence")]
     public class TextSequenceData : ScriptableObject

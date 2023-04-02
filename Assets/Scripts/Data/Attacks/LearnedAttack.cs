@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace ProjectMaster.Data.Attacks
+namespace ProjectCatch.Data.Attacks
 {
     [Serializable]
     public class LearnedAttack

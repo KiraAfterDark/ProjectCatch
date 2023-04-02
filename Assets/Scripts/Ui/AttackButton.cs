@@ -1,9 +1,9 @@
 using System;
-using ProjectMaster.Data.Attacks;
+using ProjectCatch.Data.Attacks;
 using TMPro;
 using UnityEngine;
 
-namespace ProjectMaster.Ui
+namespace ProjectCatch.Ui
 {
     public class AttackButton : MonoBehaviour
     {

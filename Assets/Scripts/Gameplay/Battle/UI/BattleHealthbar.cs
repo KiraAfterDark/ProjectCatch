@@ -1,10 +1,10 @@
-using ProjectMaster.Battle.Ui;
+using ProjectCatch.Battle.Ui;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace ProjectMaster.Gameplay.Battle.Ui
+namespace ProjectCatch.Gameplay.Battle.Ui
 {
     public class BattleHealthbar : MonoBehaviour
     {
@@ -80,7 +80,7 @@ namespace ProjectMaster.Gameplay.Battle.Ui
             pokemon.Health.OnDamage -= UpdateHealth;
             pokemon.Health.OnHeal -= UpdateHealth;
             pokemon = null;
-            TrainerBattleUi.Instance.HideHealthbar(this);
+            BattleUi.Instance.HideHealthbar(this);
         }
 
         private void OnValidate()

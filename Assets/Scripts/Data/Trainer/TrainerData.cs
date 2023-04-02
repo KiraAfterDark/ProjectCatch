@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using ProjectMaster.Data.Pokemon;
+using ProjectCatch.Data.Pokemon;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace ProjectMaster.Data.Trainers
+namespace ProjectCatch.Data.Trainers
 {
     [CreateAssetMenu(menuName = "Trainer", fileName = "New Trainer")]
     public class TrainerData : ScriptableObject

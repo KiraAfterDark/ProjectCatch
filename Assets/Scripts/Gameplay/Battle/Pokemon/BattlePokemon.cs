@@ -1,22 +1,24 @@
 using System;
 using System.Collections.Generic;
-using ProjectMaster.Data.Attacks;
-using ProjectMaster.Gameplay.Pokemon;
+using ProjectCatch.Data.Attacks;
+using ProjectCatch.Gameplay.Pokemon;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using Type = ProjectMaster.Data.Pokemon.Types.Type;
+using Type = ProjectCatch.Data.Pokemon.Types.Type;
 
-namespace ProjectMaster
+namespace ProjectCatch
 {
     public class BattlePokemon : MonoBehaviour
     {
         #region Data
         
         private PokemonInstance instance;
+
+        public PokemonInstance Instance => instance;
         
         public string Name => instance.Name;
 
-        public Type Type => instance.Type;
+        public Data.Pokemon.Types.Type Type => instance.Type;
         
         #endregion
         
@@ -34,6 +36,8 @@ namespace ProjectMaster
 
         [SerializeField]
         private Transform modelSocket;
+        
+        public bool Active { get; private set; }
 
         public void Init(PokemonInstance instance)
         {
@@ -42,12 +46,23 @@ namespace ProjectMaster
             Debug.Log($"{Name} - Level: {level} - Health: {Health.CurrentHealth}/{Health.MaxHealth}");
 
             model = Instantiate(instance.Model, modelSocket);
+
+            Active = true;
         }
 
         public void Damage(int amount)
         {
             Health.Damage(amount);
             Debug.Log($"{Name} takes {amount} damage. Current Health: {Health.CurrentHealth}");
+        }
+
+        public void Faint(Action callback)
+        {
+            Debug.Log($"{Name} has fainted.");
+            Destroy(model);
+
+            Active = false;
+            callback?.Invoke();
         }
     }
 }

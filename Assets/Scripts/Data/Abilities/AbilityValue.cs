@@ -1,4 +1,4 @@
-﻿namespace ProjectMaster.Assets.Pokemon.Abilities
+﻿namespace ProjectCatch.Assets.Pokemon.Abilities
 {
     public enum AbilityValue
     {

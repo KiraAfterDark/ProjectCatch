@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
-using ProjectMaster.Battle.Actions;
-using ProjectMaster.Data.Attacks;
-using ProjectMaster.Gameplay.Battle;
-using ProjectMaster.Ui;
+using ProjectCatch.Battle.Actions;
+using ProjectCatch.Data.Attacks;
+using ProjectCatch.Gameplay.Battle;
+using ProjectCatch.Ui;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace ProjectMaster
+namespace ProjectCatch
 {
     public class ActionSelect : MonoBehaviour
     {

@@ -1,9 +1,9 @@
 
 using System;
-using ProjectMaster.Data.Attacks;
-using ProjectMaster.Gameplay.Pokemon;
+using ProjectCatch.Data.Attacks;
+using ProjectCatch.Gameplay.Pokemon;
 
-namespace ProjectMaster.Battle.Actions
+namespace ProjectCatch.Battle.Actions
 {
     public abstract class BattleAction
     {

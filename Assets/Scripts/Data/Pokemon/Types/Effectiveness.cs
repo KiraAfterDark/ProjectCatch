@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ProjectMaster.Data.Pokemon.Types
+namespace ProjectCatch.Data.Pokemon.Types
 {
     public enum Effectiveness
     {

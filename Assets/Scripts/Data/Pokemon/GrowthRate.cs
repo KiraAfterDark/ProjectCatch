@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace ProjectMaster.Data.Pokemon
+namespace ProjectCatch.Data.Pokemon
 {
     public class GrowthRate
     {

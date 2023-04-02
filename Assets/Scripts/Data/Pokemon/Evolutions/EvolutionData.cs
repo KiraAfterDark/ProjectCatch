@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace ProjectMaster.Data.Pokemon.Evolutions
+namespace ProjectCatch.Data.Pokemon.Evolutions
 {
     [Serializable]
     public class EvolutionData

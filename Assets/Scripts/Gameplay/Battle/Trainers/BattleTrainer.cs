@@ -1,15 +1,16 @@
 using System;
 using System.Collections.Generic;
-using ProjectMaster.Battle.Actions;
-using ProjectMaster.Battle.Ui;
-using ProjectMaster.Data.Pokemon;
-using ProjectMaster.Data.Trainers;
-using ProjectMaster.Gameplay.Battle;
-using ProjectMaster.Gameplay.Pokemon;
+using System.Linq;
+using ProjectCatch.Battle.Actions;
+using ProjectCatch.Battle.Ui;
+using ProjectCatch.Data.Pokemon;
+using ProjectCatch.Data.Trainers;
+using ProjectCatch.Gameplay.Battle;
+using ProjectCatch.Gameplay.Pokemon;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace ProjectMaster
+namespace ProjectCatch
 {
     public abstract class BattleTrainer : MonoBehaviour
     {
@@ -23,10 +24,12 @@ namespace ProjectMaster
 
         private GameObject model;
 
-        protected TrainerBattleUi battleUi;
+        protected BattleUi battleUi;
         protected BattleController battleController;
 
         protected List<PokemonInstance> party;
+
+        public bool HasRemainingPokemon => party.Count > 0;
 
         [Title("Prefabs")]
         
@@ -47,7 +50,7 @@ namespace ProjectMaster
 
             model = Instantiate(data.Model, modelSocket);
 
-            battleUi = TrainerBattleUi.Instance;
+            battleUi = BattleUi.Instance;
             battleController = BattleController.Instance;
 
             party = new List<PokemonInstance>();
@@ -68,9 +71,9 @@ namespace ProjectMaster
 
         public abstract void SelectAction(Action<BattleAction> callback);
 
-        public void PokemonFainted()
+        public void SelectPokemon(Action<PokemonInstance> callback)
         {
-            Destroy(currentPokemon.gameObject);
+            battleUi.SelectPokemon(party, callback);
         }
     }
 }

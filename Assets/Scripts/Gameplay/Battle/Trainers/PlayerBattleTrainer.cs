@@ -1,8 +1,8 @@
 using System;
-using ProjectMaster.Battle.Actions;
-using ProjectMaster.Battle.Ui;
+using ProjectCatch.Battle.Actions;
+using ProjectCatch.Battle.Ui;
 
-namespace ProjectMaster
+namespace ProjectCatch
 {
     public class PlayerBattleTrainer : BattleTrainer
     {
@@ -13,8 +13,8 @@ namespace ProjectMaster
             currentPokemon = Instantiate(battlePokemonPrefab, pokemonSocket);
             currentPokemon.Init(party[0]);
             
-            TrainerBattleUi.Instance.UsePokemon(Name, currentPokemon.Name, callback);
-            TrainerBattleUi.Instance.ShowPlayerHealth(currentPokemon);
+            BattleUi.Instance.UsePokemon(Name, currentPokemon.Name, callback);
+            BattleUi.Instance.ShowPlayerHealth(currentPokemon);
         }
 
         public override void SelectAction(Action<BattleAction> callback)

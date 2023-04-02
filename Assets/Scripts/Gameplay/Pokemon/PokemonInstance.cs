@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using ProjectMaster.Data.Attacks;
-using ProjectMaster.Data.Pokemon;
-using ProjectMaster.Data.Pokemon.Types;
+using ProjectCatch.Data.Attacks;
+using ProjectCatch.Data.Pokemon;
+using ProjectCatch.Data.Pokemon.Types;
 using UnityEngine;
 
-namespace ProjectMaster.Gameplay.Pokemon
+namespace ProjectCatch.Gameplay.Pokemon
 {
     public class PokemonInstance
     {
@@ -53,6 +53,11 @@ namespace ProjectMaster.Gameplay.Pokemon
 
             Attacks = new List<Attack>();
             Attacks.AddRange(data.Attacks);
+        }
+
+        public void Fainted()
+        {
+            Debug.Log($"{Name} has fainted at level {Level}");
         }
     }
 }

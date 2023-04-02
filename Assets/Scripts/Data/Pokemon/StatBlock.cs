@@ -2,7 +2,7 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace ProjectMaster.Data.Pokemon
+namespace ProjectCatch.Data.Pokemon
 {
 	[Serializable]
 	public class StatBlock

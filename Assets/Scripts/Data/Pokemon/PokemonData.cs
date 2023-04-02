@@ -1,14 +1,14 @@
 using System.Collections.Generic;
+using ProjectCatch.Assets.Pokemon.Abilities;
+using ProjectCatch.Data.Attacks;
+using ProjectCatch.Data.Pokemon.Evolutions;
+using ProjectCatch.Data.Pokemon.Types;
 using ProjectCatch.Pokedex;
-using ProjectMaster.Assets.Pokemon.Abilities;
-using ProjectMaster.Data.Attacks;
-using ProjectMaster.Data.Pokemon.Evolutions;
-using ProjectMaster.Data.Pokemon.Types;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Localization.Tables;
 
-namespace ProjectMaster.Data.Pokemon
+namespace ProjectCatch.Data.Pokemon
 {
 	[CreateAssetMenu(menuName = "Pokemon/Data", fileName = "New Pokemon Data")]
 	public class PokemonData : ScriptableObject

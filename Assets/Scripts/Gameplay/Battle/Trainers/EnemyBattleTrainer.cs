@@ -1,9 +1,9 @@
 using System;
-using ProjectMaster.Battle.Actions;
-using ProjectMaster.Battle.Ui;
+using ProjectCatch.Battle.Actions;
+using ProjectCatch.Battle.Ui;
 using Random = UnityEngine.Random;
 
-namespace ProjectMaster
+namespace ProjectCatch
 {
     public class EnemyBattleTrainer : BattleTrainer
     {
@@ -12,8 +12,8 @@ namespace ProjectMaster
             currentPokemon = Instantiate(battlePokemonPrefab, pokemonSocket);
             currentPokemon.Init(party[0]);
             
-            TrainerBattleUi.Instance.UsePokemon(Name, currentPokemon.Name, callback);
-            TrainerBattleUi.Instance.ShowEnemyHealth(currentPokemon);
+            BattleUi.Instance.UsePokemon(Name, currentPokemon.Name, callback);
+            BattleUi.Instance.ShowEnemyHealth(currentPokemon);
         }
 
         public override void SelectAction(Action<BattleAction> callback)

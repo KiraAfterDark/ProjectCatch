@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace ProjectMaster.Ui
+namespace ProjectCatch.Ui
 {
     public class TextBox : MonoBehaviour
     {

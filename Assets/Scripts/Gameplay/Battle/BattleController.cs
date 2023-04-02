@@ -1,15 +1,16 @@
 using System;
 using System.Collections.Generic;
 using Fsi.Runtime;
-using ProjectMaster.Battle.Actions;
-using ProjectMaster.Battle.Ui;
-using ProjectMaster.Data.Attacks;
-using ProjectMaster.Data.Pokemon.Types;
-using ProjectMaster.Data.Trainers;
+using ProjectCatch.Battle.Actions;
+using ProjectCatch.Battle.Ui;
+using ProjectCatch.Data.Attacks;
+using ProjectCatch.Data.Pokemon.Types;
+using ProjectCatch.Data.Trainers;
+using ProjectCatch.Gameplay.Pokemon;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace ProjectMaster.Gameplay.Battle
+namespace ProjectCatch.Gameplay.Battle
 {
     
     /// <summary>
@@ -23,7 +24,7 @@ namespace ProjectMaster.Gameplay.Battle
     {
         [Title("BattleUi")]
 
-        protected TrainerBattleUi battleUi;
+        protected BattleUi battleUi;
         
         [Title("Player Trainer")]
         
@@ -49,7 +50,7 @@ namespace ProjectMaster.Gameplay.Battle
 
         private void Start()
         {
-            battleUi = TrainerBattleUi.Instance;
+            battleUi = BattleUi.Instance;
             
             playerTrainer = Instantiate(playerTrainerPrefab, playerTrainerSocket);
             playerTrainer.Init(playerTrainerData, playerPokemonSocket);
@@ -163,6 +164,23 @@ namespace ProjectMaster.Gameplay.Battle
         {
             Debug.Log("Finished attack");
             EvaluateField();
+        }
+
+        #endregion
+        
+        #region Evaluate Field
+        
+        protected void PlayerPokemonFainted()
+        {
+            if (playerTrainer.HasRemainingPokemon)
+            {
+                playerTrainer.SelectPokemon(OnPlayerSelectPokemon);
+            }
+        }
+
+        protected void OnPlayerSelectPokemon(PokemonInstance instance)
+        {
+            
         }
 
         #endregion

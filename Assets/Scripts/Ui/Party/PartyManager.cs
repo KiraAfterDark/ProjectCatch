@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ProjectCatch
 {
-    public class GameplayUi : MonoBehaviour
+    public class PartyManager : MonoBehaviour
     {
         // Start is called before the first frame update
         void Start()

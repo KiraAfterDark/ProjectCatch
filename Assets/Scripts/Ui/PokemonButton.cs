@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ProjectCatch
+namespace ProjectCatch.Ui
 {
-    public class GameplayUi : MonoBehaviour
+    public class PokemonButton : MonoBehaviour
     {
         // Start is called before the first frame update
         void Start()

@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using ProjectMaster.Gameplay.Pokemon;
+using ProjectCatch.Gameplay.Pokemon;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace ProjectMaster
+namespace ProjectCatch
 {
     public class Trainer
     {

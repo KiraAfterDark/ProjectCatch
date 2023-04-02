@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using ProjectMaster.Battle.Actions;
-using ProjectMaster.Data.Trainers;
+using ProjectCatch.Battle.Actions;
+using ProjectCatch.Data.Trainers;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace ProjectMaster.Gameplay.Battle.TrainerBattle
+namespace ProjectCatch.Gameplay.Battle.TrainerBattle
 {
     public class TrainerBattleController : BattleController
     {
@@ -88,15 +88,11 @@ namespace ProjectMaster.Gameplay.Battle.TrainerBattle
 
             if (playerTrainer.CurrentPokemon.Health.Fainted)
             {
-                playerTrainer.PokemonFainted();
-                battleUi.TrainerWin(enemyTrainer, null);
-                Debug.Log("Enemy Wins");
+                playerTrainer.CurrentPokemon.Faint(PlayerPokemonFainted);
             }
             else if (enemyTrainer.CurrentPokemon.Health.Fainted)
             {
-                enemyTrainer.PokemonFainted();
-                battleUi.TrainerWin(playerTrainer, null);
-                Debug.Log("Player Wins");
+                // enemyTrainer.CurrentPokemon.Faint();
             }
             else if (turnActions.Count > 0)
             {
@@ -106,11 +102,6 @@ namespace ProjectMaster.Gameplay.Battle.TrainerBattle
             {
                 StartActionPhase();
             }
-        }
-
-        private void PlayerNextPokemon()
-        {
-            
         }
 
         private void EnemyNextPokemon()

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace ProjectMaster.Gameplay.Pokemon
+namespace ProjectCatch.Gameplay.Pokemon
 {
 	public class Health
 	{

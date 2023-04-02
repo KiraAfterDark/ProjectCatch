@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ProjectMaster.Gameplay.Ui
+namespace ProjectCatch.Gameplay.Ui
 {
     public class PartyScreen : MonoBehaviour
     {

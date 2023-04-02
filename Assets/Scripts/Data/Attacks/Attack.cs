@@ -1,7 +1,7 @@
-﻿using ProjectMaster.Data.Pokemon.Types;
+﻿using ProjectCatch.Data.Pokemon.Types;
 using UnityEngine;
 
-namespace ProjectMaster.Data.Attacks
+namespace ProjectCatch.Data.Attacks
 {
     [CreateAssetMenu(menuName = "Attack", fileName = "New Attack")]
     public class Attack : ScriptableObject
