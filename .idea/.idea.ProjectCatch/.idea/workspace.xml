@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0afdf038-2cdd-4c73-877b-256fa80e1345" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectCatch/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectCatch/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Map/DefaultMapProperties.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Map/DefaultMapProperties.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Map/MapGenerator.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Map/MapGenerator.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Map/MapNode.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Map/MapNode.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/Map.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapDebug.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapDebug.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapProperties.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapProperties.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

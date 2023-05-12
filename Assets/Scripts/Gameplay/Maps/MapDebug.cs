@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace ProjectCatch.Gameplay.Maps
 {
@@ -61,6 +60,18 @@ namespace ProjectCatch.Gameplay.Maps
                     line.SetPosition(1, new Vector3(next.Position.x, next.Position.y, 0) * properties.SpacingMod);
 
                     lines.Add(line);
+                }
+            }
+        }
+
+        private void OnDrawGizmos()
+        {
+            for (int i = -properties.Size.x; i <= properties.Size.x; i++)
+            {
+                for (int j = 0; j < properties.Size.y; j++)
+                {
+                    Gizmos.color=Color.blue;
+                    Gizmos.DrawSphere(new Vector3(i * properties.SpacingMod.x, j * properties.SpacingMod.y, 0), 0.25f);
                 }
             }
         }

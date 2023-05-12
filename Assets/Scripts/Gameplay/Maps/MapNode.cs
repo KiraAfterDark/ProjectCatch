@@ -27,5 +27,15 @@ namespace ProjectCatch.Gameplay.Maps
         {
             Prev.Add(prev);
         }
+
+        public void RemoveNext(MapNode next)
+        {
+            Next.Remove(next);
+        }
+
+        public void RemovePrev(MapNode prev)
+        {
+            Prev.Remove(prev);
+        }
     }
 }

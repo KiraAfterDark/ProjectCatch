@@ -17,7 +17,25 @@ namespace ProjectCatch.Gameplay.Maps
         private int lines = 2;
 
         public int Lines => lines;
-        
+
+        [Range(0, 1)]
+        [SerializeField]
+        private float splitChance = 0;
+
+        public float SplitChance => splitChance;
+
+        [Min(0)]
+        [SerializeField]
+        private int splitAttempts = 1;
+
+        public int SplitAttempts => splitAttempts;
+
+        [Min(0)]
+        [SerializeField]
+        private int incrementMax = 2;
+
+        public int IncrementMax => incrementMax;
+
         [Title("Map Visuals")]
         [SerializeField]
         private GameObject nodePrefab;
