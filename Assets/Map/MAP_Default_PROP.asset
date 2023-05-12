@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4e7a7a243dc442b870769b589b6a966, type: 3}
-  m_Name: DefaultMapProperties
+  m_Script: {fileID: 11500000, guid: 8223c85672874c988e0ce2e2663caca1, type: 3}
+  m_Name: MAP_Default_PROP
   m_EditorClassIdentifier: 
-  mapNodeObject: {fileID: 7233588946233179579, guid: 7cb822e8083ccc5438ce826513d12ae8,
-    type: 3}
+  size: {x: 0, y: 0}
