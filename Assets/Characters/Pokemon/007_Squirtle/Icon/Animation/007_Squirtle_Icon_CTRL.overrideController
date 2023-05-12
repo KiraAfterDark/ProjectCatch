@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 007_Squirtle_Icon_CTRL
+  m_Controller: {fileID: 9100000, guid: 5a3203697d4516541844176acfa64824, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 452538354b1e7884eb79bbbd841b95f7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 722382b101d2e0748a4d09502832ac4a, type: 2}

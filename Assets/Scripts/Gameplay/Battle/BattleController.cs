@@ -1,12 +1,13 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Fsi.Runtime;
 using ProjectCatch.Battle.Actions;
 using ProjectCatch.Battle.Ui;
 using ProjectCatch.Data.Attacks;
-using ProjectCatch.Data.Pokemon.Types;
-using ProjectCatch.Data.Trainers;
+using ProjectCatch.Gameplay.Battle.Initializer;
 using ProjectCatch.Gameplay.Pokemon;
+using ProjectCatch.Gameplay.Pokemon.Types;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -25,9 +26,9 @@ namespace ProjectCatch.Gameplay.Battle
         [Title("BattleUi")]
 
         protected BattleUi battleUi;
-        
+
         [Title("Player Trainer")]
-        
+
         [SerializeField]
         private BattleTrainer playerTrainerPrefab;
 
@@ -38,29 +39,39 @@ namespace ProjectCatch.Gameplay.Battle
         private Transform playerPokemonSocket;
 
         [SerializeField]
-        private TrainerData playerTrainerData;
-
+        private TrainerInstanceData playerTrainerData;
+        
+        private TrainerInstance playerTrainerInstance;
         protected BattleTrainer playerTrainer;
-
-        protected readonly List<BattleAction> turnActions = new List<BattleAction>();
-
+        
         public BattlePokemon PlayerPokemon => playerTrainer.CurrentPokemon;
         
         public abstract BattlePokemon EnemyPokemon { get; }
 
+        // Actions
+        protected readonly List<BattleAction> turnActions = new List<BattleAction>();
+        
         private void Start()
         {
             battleUi = BattleUi.Instance;
-            
-            playerTrainer = Instantiate(playerTrainerPrefab, playerTrainerSocket);
-            playerTrainer.Init(playerTrainerData, playerPokemonSocket);
-            
-            StartStartPhase();
+
+            if (GameplayController.Instance.TryGetBattleInitializer(out BattleInitializer battleInitializer))
+            {
+                playerTrainerInstance = battleInitializer.PlayerTrainerInstance;
+                InitEnemy(battleInitializer);
+                StartStartPhase();
+            }
         }
+        
+        protected abstract void InitEnemy(BattleInitializer initializer);
 
         #region Start Phase
-        
-        protected abstract void StartStartPhase();
+
+        protected virtual void StartStartPhase()
+        {
+            playerTrainer = Instantiate(playerTrainerPrefab, playerTrainerSocket);
+            playerTrainer.Init(playerTrainerInstance, playerPokemonSocket);
+        }
         
         #endregion
         
@@ -72,6 +83,7 @@ namespace ProjectCatch.Gameplay.Battle
             // Get enemy action
             // sort actions
 
+            Debug.Log("Start Action Phase");
             playerTrainer.SelectAction(ReceivePlayerAction);
         }
 
@@ -107,80 +119,34 @@ namespace ProjectCatch.Gameplay.Battle
             }
 
             turnActions.Remove(action);
-            
-            if (action is AttackAction attack)
-            {
-                UseAttack(attack);
-            }
+            action.Resolve(EvaluateField);
         }
 
         protected abstract void EvaluateField();
 
-        #region Attack Action
-        
-        private void UseAttack(AttackAction action)
-        {
-            Debug.Log("Using attack");
-            StartUseAttack(action.Attack, action.Attacker, action.Target);
-        }
-
-        private void StartUseAttack(Attack attack, BattlePokemon attacker, BattlePokemon target)
-        {
-            battleUi.UseAttack(attacker.Name, attack.Name, () =>
-            {
-                Effectiveness effectiveness =
-                    GameplayController.Instance.TypeChart.GetEffectiveness(attack.Type, target.Type);
-
-                int damage = attack.Power;
-
-                switch (effectiveness)
-                {
-                    case Effectiveness.NoEffect:
-                        battleUi.NoEffect(EndUseAttack);
-                        break;
-
-                    case Effectiveness.NotVeryEffective:
-                        target.Damage(damage / 2);
-                        battleUi.NotVeryEffective(EndUseAttack);
-                        break;
-
-                    case Effectiveness.Effective:
-                        target.Damage(damage);
-                        EndUseAttack();
-                        break;
-
-                    case Effectiveness.SuperEffective:
-                        target.Damage(damage * 2);
-                        battleUi.SuperEffective(EndUseAttack);
-                        break;
-
-                    default:
-                        throw new ArgumentOutOfRangeException();
-                }
-            });
-        }
-
-        private void EndUseAttack()
-        {
-            Debug.Log("Finished attack");
-            EvaluateField();
-        }
-
-        #endregion
-        
         #region Evaluate Field
         
         protected void PlayerPokemonFainted()
         {
             if (playerTrainer.HasRemainingPokemon)
             {
-                playerTrainer.SelectPokemon(OnPlayerSelectPokemon);
+                playerTrainer.SelectPokemon(OnPlayerSelectPokemon, null);
+            }
+            else
+            {
+                PlayerLose();
             }
         }
 
-        protected void OnPlayerSelectPokemon(PokemonInstance instance)
+        private void OnPlayerSelectPokemon(PokemonInstance instance)
         {
-            
+            playerTrainer.UsePokemon(instance, OnPlayerUsePokemon);
+        }
+
+        private void OnPlayerUsePokemon()
+        {
+            Debug.Log($"Player used: {playerTrainer.CurrentPokemon.Name} - Level {playerTrainer.CurrentPokemon.Level}");
+            EvaluateField();
         }
 
         #endregion
@@ -193,7 +159,15 @@ namespace ProjectCatch.Gameplay.Battle
         {
             
         }
-        
+
+        protected void PlayerWin()
+        {
+            Debug.Log("Player win!");
+            battleUi.TrainerWin(playerTrainer, () => { });
+        }
+
+        protected abstract void PlayerLose();
+
         #endregion
         
 
@@ -203,14 +177,24 @@ namespace ProjectCatch.Gameplay.Battle
             
             if (playerTrainerSocket)
             {
+                Vector3 position = playerTrainerSocket.position;
+                Vector3 forward = playerTrainerSocket.forward;
+                
                 Gizmos.color = Color.green;
-                Gizmos.DrawCube(playerTrainerSocket.position, positionExtends);
+                Gizmos.DrawCube(position, positionExtends);
+                Gizmos.DrawRay(position, forward * 1);
+                Gizmos.DrawSphere(position + forward * 1, 0.2f);
             }
             
             if (playerPokemonSocket)
             {
+                Vector3 position = playerPokemonSocket.position;
+                Vector3 forward = playerPokemonSocket.forward;
+                
                 Gizmos.color = Color.blue;
-                Gizmos.DrawCube(playerPokemonSocket.position, positionExtends/2);
+                Gizmos.DrawCube(position, positionExtends/2);
+                Gizmos.DrawRay(position, forward * 1);
+                Gizmos.DrawSphere(position + forward * 1, 0.1f);
             }
         }
     }

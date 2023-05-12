@@ -2,20 +2,75 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0afdf038-2cdd-4c73-877b-256fa80e1345" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectCatch/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectCatch/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Attacks/000_Default/000_Default_02_ATK.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Config/Attacks/000_Default/000_Default_02_ATK.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon/000_DefaultPokemon.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon/000_DefaultPokemon/000_Default_01_PKM.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon/000_DefaultPokemon/000_Default_01_PKM.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon/000_DefaultPokemon/000_Default_02_PKM.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon/000_DefaultPokemon/000_Default_02_PKM.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon/000_DefaultPokemon/Mesh.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon/000_DefaultPokemon/Mesh/000_Default_MESH.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon/000_DefaultPokemon/Mesh/000_Default_MESH.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon/001_Bulbasaur.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon/001_Bulbasaur/001_Bulbasaur_MESH.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon/001_Bulbasaur/001_Bulbasaur_MESH.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon/001_Bulbasaur/001_Bulbasaur_PKM.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon/001_Bulbasaur/001_Bulbasaur_PKM.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon/004_Charmander.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon/004_Charmander/004_Charmander_MESH.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon/004_Charmander/004_Charmander_MESH.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon/004_Charmander/004_Charmander_PKM.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon/004_Charmander/004_Charmander_PKM.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon/007_Squirtle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon/007_Squirtle/007_Squirtle_MESH.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon/007_Squirtle/007_Squirtle_MESH.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon/007_Squirtle/007_Squirtle_PKM.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Pokemon/007_Squirtle/007_Squirtle_PKM.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Trainers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Trainers/!PlayerDebugging.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Trainers/!PlayerDebugging/PlayerDebug_MSH.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Trainers/!PlayerDebugging/PlayerDebug_MSH.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Trainers/!PlayerDebugging/PlayerDebuggingTrainer_01.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Trainers/!PlayerDebugging/PlayerDebuggingTrainer_01.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Trainers/000_Trainer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Trainers/000_Trainer/000_Trainer_CFG.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Trainers/000_Trainer/000_Trainer_CFG.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Trainers/000_Trainer/000_Trainer_MSH.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Config/Trainers/000_Trainer/000_Trainer_MSH.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Input/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/PlayerInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input/PlayerInput.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/PlayerInput.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input/PlayerInput.inputactions.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/PlayerInput.inputactions.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Battle/BTL_TrainerBattleController_PFB.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Battle/BTL_TrainerBattleController_PFB.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game/Battle/Environments/BE_Default_SCN.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game/Battle/Environments/BE_Default_SCN.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game/Battle/Trainer_Battle_SCN.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game/Battle/Trainer_Battle_SCN.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game/Game_SCN.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game/Game_SCN.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Abilities/AbilityValue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Abilities/AbilityValue.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Attacks/Attack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Attacks/Attack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Attacks/LearnedAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Attacks/LearnedAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/Evolutions/EvolutionData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/Evolutions/EvolutionData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/GrowthRate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/GrowthRate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/PokemonData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/PokemonData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/StatBlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/StatBlock.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/Types/Effectiveness.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/Types/Effectiveness.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/Types/Type.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/Types/Type.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/Types/TypeChart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/Types/TypeChart.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Trainer/TrainerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Trainer/TrainerData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Attacks.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Attacks/Attack.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Attacks/Attack.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Attacks/LearnedAttack.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Attacks/LearnedAttack.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/Evolutions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/Evolutions/EvolutionData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/Evolutions/EvolutionData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/GrowthRate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/GrowthRate.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/PokemonData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/PokemonData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/StatBlock.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/StatBlock.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/Types.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/Types/Effectiveness.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/Types/Effectiveness.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/Types/Type.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/Types/Type.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/Types/TypeChart.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Pokemon/Types/TypeChart.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Trainer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Trainer/TrainerData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Trainer/TrainerData.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/Actions/BattleAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/Actions/BattleAction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/BattleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/BattleController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/Pokemon/BattlePokemon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/Pokemon/BattlePokemon.cs" afterDir="false" />
@@ -24,32 +79,53 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/Trainers/EnemyBattleTrainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/Trainers/EnemyBattleTrainer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/Trainers/PlayerBattleTrainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/Trainers/PlayerBattleTrainer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/UI/ActionSelect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/UI/ActionSelect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/UI/BattleHealthbar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/UI/BattleHealthbar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/UI/BattleText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/UI/BattleText.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/UI/TrainerBattleUi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/UI/BattleUi.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/UI/TrainerBattleUi.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/UI/BattleUi.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/UI/BattleHealthbar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/UI/PokemonBattleInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/UI/BattleHealthbar.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/UI/PokemonBattleInfo.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/UI/BattleUi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/UI/BattleUi.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/GameplayController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/GameplayController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Pokemon/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Pokemon/Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/GameplayController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/GameplayController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Pokemon/PokemonInstance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Pokemon/PokemonInstance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Trainers/Trainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Trainers/Trainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Ui/GameplayUi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Ui/GameplayUi.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Ui/PartyScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Ui/PartyScreen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Ui/PokemonSelectPopup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Ui/PokemonSelectPopup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Trainers/Trainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Trainers/TrainerInstance.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Trainers/Trainer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Trainers/TrainerInstance.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Ui/PartyScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Ui/PartyManagerScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Ui/PartyScreen.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Ui/PartyManagerScreen.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/AttackButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/AttackButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/TextBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/TextBox.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/TextSequence.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/TextSequence.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/TextSequenceData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/TextSequenceData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIODL/BattleUi/BattleUi.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIODL/BattleUi/BattleUi.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ui/Battle/BTL_Default_UI.uxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ui/Battle/BTL_Default_UI.uxml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ui/Battle/BTL_Default_USS.uss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ui/Battle/BTL_Default_USS.uss.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ui/Battle/BTL_PokemonInfo_UI.uxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ui/Battle/BTL_PokemonInfo_UI.uxml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ui/Battle/Health.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ui/GAME_Default_USS.uss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ui/GAME_Default_USS.uss.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/Party.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/Party/PartyManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/Party/PartyManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/PokemonButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/PokemonButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIODL.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIODL/BattleUi.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIODL/BattleUi/ActionSelect.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIODL/BattleUi/ActionSelect/ActionSelect.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIODL/BattleUi/ActionSelect/ActionSelect.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIODL/BattleUi/ActionSelect/AttackButton.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIODL/BattleUi/ActionSelect/AttackButton.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIODL/BattleUi/BattleHealthbar.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIODL/BattleUi/BattleHealthbar.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIODL/BattleUi/BattleUi.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIODL/BattleUi/BattleUi.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIODL/GameCanvas_Overlay.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIODL/GameCanvas_Overlay.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIODL/TextBox.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIODL/TextBox.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ui/Battle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ui/Battle/BTL_ActionSelect_UI.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ui/Battle/BTL_ActionSelect_UI.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ui/Battle/BTL_PokemonHealth_UI.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ui/Battle/BTL_PokemonHealth_UI.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ui/GAME_Canvas_CNV.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ui/GAME_Canvas_CNV.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ui/GAME_TextBox_UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ui/GAME_TextBox_UI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ui/GAME_TextBox_UI.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ui/GAME_TextBox_UI.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_StandaloneWindows.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_StandaloneWindows.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/CommonBurstAotSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/CommonBurstAotSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/PresetManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PresetManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,32 +133,54 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f45a99ffbb9f4d0580258c77e560b3ab16e000/76/a21e6cd0/RangeInt.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animation/RandomizeTransition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/Cameras/DollyAutoMove.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/Initializer/TrainerBattleInitializer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Items/Ui/BagScreen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/Map.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapNodes/MapNode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Pokemon/PokemonData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Pokemon/PokemonInstanceData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Pokemon/PokemonModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Trainers/TrainerInstanceData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ui/AttackInfoBox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ui/PokemonButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ui/Tabs/TabGroup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/PokemonMath.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.fallingsnowinteractive.fsidefault@243a3bc42a/Runtime/Math/Range.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.fallingsnowinteractive.fsidefault@243a3bc42a/Runtime/MbSingleton.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Canvas/NoActiveCameraInSceneDoesNotCrashEditor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2NpufaFnWeOpOTfkyY11JUFGGyj" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\samdi\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\samdi\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\samdi\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\samdi\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\samdi\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\samdi\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.2.6f1\Editor\Unity.exe" />
@@ -130,6 +228,19 @@
       <option name="presentableId" value="Default" />
       <updated>1680373452411</updated>
       <workItem from="1680373457092" duration="2473000" />
+      <workItem from="1680463244099" duration="15185000" />
+      <workItem from="1680886492864" duration="176000" />
+      <workItem from="1682112171954" duration="5069000" />
+      <workItem from="1682172668841" duration="6402000" />
+      <workItem from="1682206536267" duration="3511000" />
+      <workItem from="1682253345726" duration="163000" />
+      <workItem from="1682259975335" duration="9379000" />
+      <workItem from="1682283264066" duration="5721000" />
+      <workItem from="1682776673728" duration="2110000" />
+      <workItem from="1682789388017" duration="477000" />
+      <workItem from="1682876692515" duration="9718000" />
+      <workItem from="1682891823707" duration="31000" />
+      <workItem from="1683918675193" duration="333000" />
     </task>
     <servers />
   </component>
@@ -140,5 +251,55 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/UI/ActionSelect.cs</url>
+          <line>44</line>
+          <properties documentPath="E:\FsiDepot\ProjectCatch\Assets\Scripts\Gameplay\Battle\UI\ActionSelect.cs" initialLine="34" containingFunctionPresentation="method 'Init'">
+            <startOffsets>
+              <option value="1147" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1165" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/Trainers/BattleTrainer.cs</url>
+          <line>61</line>
+          <properties documentPath="E:\FsiDepot\ProjectCatch\Assets\Scripts\Gameplay\Battle\Trainers\BattleTrainer.cs" initialLine="62" containingFunctionPresentation="method 'StartBattle'">
+            <startOffsets>
+              <option value="1673" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1704" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapNodes/MapNodeObject.cs</url>
+          <line>29</line>
+          <properties documentPath="E:\FsiDepot\ProjectCatch\Assets\Scripts\Gameplay\Maps\MapNodes\MapNodeObject.cs" initialLine="28" containingFunctionPresentation="method 'AddChild'">
+            <startOffsets>
+              <option value="824" />
+            </startOffsets>
+            <endOffsets>
+              <option value="905" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Type#ProjectCatch.Gameplay.Maps.MapNodes.MapNode" memberName="ParentNode" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

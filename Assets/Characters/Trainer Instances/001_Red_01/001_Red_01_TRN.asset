@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529b8bc07bf86814f87844ef639c4d1a, type: 3}
+  m_Name: 001_Red_01_TRN
+  m_EditorClassIdentifier: 
+  name: Red
+  model: {fileID: 6888372187136117821, guid: 0bc53b1def41ee841b6368ead62759f6, type: 3}
+  partyInstance:
+  - {fileID: 11400000, guid: bbef5a3780fa2ff4ca577f538c8bf5ae, type: 2}
+  - {fileID: 11400000, guid: 7864f1f970447b94291ab35b9258dc15, type: 2}
+  - {fileID: 11400000, guid: 14c60ac6b08371647b2cdf621c53ee6b, type: 2}
+  - {fileID: 11400000, guid: 5a863fa2f6aa91e4b9c5243ab2c422f5, type: 2}

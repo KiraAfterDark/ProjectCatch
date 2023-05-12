@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using ProjectCatch.Battle.Actions;
-using ProjectCatch.Data.Trainers;
+using ProjectCatch.Gameplay.Battle.Initializer;
+using ProjectCatch.Gameplay.Pokemon;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -9,7 +10,7 @@ namespace ProjectCatch.Gameplay.Battle.TrainerBattle
     public class TrainerBattleController : BattleController
     {
         [Title("Enemy Trainer")]
-        
+
         [SerializeField]
         private BattleTrainer enemyTrainerPrefab;
         
@@ -18,42 +19,37 @@ namespace ProjectCatch.Gameplay.Battle.TrainerBattle
 
         [SerializeField]
         private Transform enemyPokemonSocket;
-
-        [SerializeField]
-        private TrainerData enemyTrainerData;
-
+        
+        private TrainerInstance enemyTrainerInstance;
         private BattleTrainer enemyTrainer;
 
         public override BattlePokemon EnemyPokemon => enemyTrainer.CurrentPokemon;
 
         #region Start Phase
-        
+        protected override void InitEnemy(BattleInitializer initializer)
+        {
+            if (initializer is TrainerBattleInitializer trainerInitializer)
+            {
+                enemyTrainerInstance = trainerInitializer.EnemyTrainerInstance;
+            }
+        }
+
         protected override void StartStartPhase()
         {
-            enemyTrainer = Instantiate(enemyTrainerPrefab, enemyTrainerSocket);
-            enemyTrainer.Init(enemyTrainerData, enemyPokemonSocket);
+            base.StartStartPhase();
             
-            StartBattle();
+            enemyTrainer = Instantiate(enemyTrainerPrefab, enemyTrainerSocket);
+            enemyTrainer.Init(enemyTrainerInstance, enemyPokemonSocket);
+
+            battleUi.StartBattle(enemyTrainer.Name, () =>
+            {
+                enemyTrainer.StartBattle(() =>
+                {
+                    playerTrainer.StartBattle(StartActionPhase);
+                });
+            });
         }
 
-        private void StartBattle()
-        {
-            Debug.Log("Start Trainer Battle");
-            battleUi.StartBattle(enemyTrainer.Name, EnemyStartBattle);
-        }
-
-        private void EnemyStartBattle()
-        {
-            Debug.Log("Enemy Start");
-            enemyTrainer.StartBattle(PlayerStartBattle);
-        }
-
-        private void PlayerStartBattle()
-        {
-            Debug.Log("Player Start");
-            playerTrainer.StartBattle(StartActionPhase);
-        }
-        
         #endregion
         
         #region Select Phase
@@ -88,11 +84,11 @@ namespace ProjectCatch.Gameplay.Battle.TrainerBattle
 
             if (playerTrainer.CurrentPokemon.Health.Fainted)
             {
-                playerTrainer.CurrentPokemon.Faint(PlayerPokemonFainted);
+                playerTrainer.PokemonFainted(PlayerPokemonFainted);
             }
             else if (enemyTrainer.CurrentPokemon.Health.Fainted)
             {
-                // enemyTrainer.CurrentPokemon.Faint();
+                enemyTrainer.PokemonFainted(EnemyPokemonFainted);
             }
             else if (turnActions.Count > 0)
             {
@@ -104,12 +100,37 @@ namespace ProjectCatch.Gameplay.Battle.TrainerBattle
             }
         }
 
-        private void EnemyNextPokemon()
+        private void EnemyPokemonFainted()
         {
-            
+            if (enemyTrainer.HasRemainingPokemon)
+            {
+                Debug.Log("Enemy selecting pokmeon");
+                enemyTrainer.SelectPokemon(OnEnemySelectPokemon, null);
+            }
+            else
+            {
+                PlayerWin();
+            }
+        }
+
+        private void OnEnemySelectPokemon(PokemonInstance instance)
+        {
+            enemyTrainer.UsePokemon(instance, EnemyUsePokemon);
+        }
+
+        private void EnemyUsePokemon()
+        {
+            Debug.Log($"Enemy used: {enemyTrainer.CurrentPokemon.Name} - Level {enemyTrainer.CurrentPokemon.Level}");
+            EvaluateField();
         }
         
         #endregion
+
+        protected override void PlayerLose()
+        {
+            Debug.Log("Player Lose");
+            battleUi.TrainerWin(enemyTrainer, () => { });
+        }
 
         protected override void OnDrawGizmos()
         {
@@ -119,14 +140,24 @@ namespace ProjectCatch.Gameplay.Battle.TrainerBattle
             
             if (enemyTrainerSocket)
             {
+                Vector3 position = enemyTrainerSocket.position;
+                Vector3 forward = enemyTrainerSocket.forward;
+                
                 Gizmos.color = Color.red;
-                Gizmos.DrawCube(enemyTrainerSocket.position, positionExtends);
+                Gizmos.DrawCube(position, positionExtends);
+                Gizmos.DrawRay(position, forward * 1);
+                Gizmos.DrawSphere(position + forward * 1, 0.2f);
             }
             
             if (enemyPokemonSocket)
             {
+                Vector3 position = enemyPokemonSocket.position;
+                Vector3 forward = enemyPokemonSocket.forward;
+                
                 Gizmos.color = Color.blue;
-                Gizmos.DrawCube(enemyPokemonSocket.position, positionExtends/2);
+                Gizmos.DrawCube(position, positionExtends/2);
+                Gizmos.DrawRay(position, forward * 1);
+                Gizmos.DrawSphere(position + forward * 1, 0.1f);
             }
         }
     }

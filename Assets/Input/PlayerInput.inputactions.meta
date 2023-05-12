@@ -11,4 +11,4 @@ ScriptedImporter:
   generateWrapperCode: 1
   wrapperCodePath: 
   wrapperClassName: 
-  wrapperCodeNamespace: ProjectMaster.Input
+  wrapperCodeNamespace: ProjectCatch.Input

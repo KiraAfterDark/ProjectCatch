@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using ProjectCatch.Data.Attacks;
-using ProjectCatch.Data.Pokemon;
-using ProjectCatch.Data.Pokemon.Types;
+using ProjectCatch.Gameplay.Pokemon.Types;
 using UnityEngine;
 
 namespace ProjectCatch.Gameplay.Pokemon
@@ -11,20 +10,24 @@ namespace ProjectCatch.Gameplay.Pokemon
         #region Pokemon Data
         
         private PokemonData data;
-        
+
         public string Name => data.Name;
 
-        public Type Type => data.TypeOne;
+        public PokemonType PokemonType => data.TypeOne;
 
-        public GameObject Model => data.Model;
+        public PokemonModel Model => data.Model;
+
+        public GameObject Icon => data.Icon;
         
         #endregion
         
         public int Level { get; private set; }
         
         #region Stats
-        
+
         private StatBlock ivs;
+
+        public StatBlock Stats { get; private set; }
         
         #endregion
         
@@ -46,13 +49,25 @@ namespace ProjectCatch.Gameplay.Pokemon
             this.data = data;
 
             Level = level;
-            
-            ivs = StatBlock.RandomIVs;
 
-            Health = new Health(data.BaseStats.Hp);
+            Fsi.Math.RangeInt range = new (1, 31);
+            ivs = new StatBlock(range.Random(), range.Random(), range.Random(), range.Random(), range.Random(), range.Random());
 
+            Stats = new StatBlock(level, data.BaseStats, ivs);
+
+            Health = new Health(Stats.Hp);
             Attacks = new List<Attack>();
             Attacks.AddRange(data.Attacks);
+        }
+
+        public PokemonInstance(PokemonInstanceData instanceData)
+        {
+            data = instanceData.Data;
+            Level = instanceData.Level;
+            ivs = instanceData.Ivs;
+            Stats = instanceData.Stats;
+            Health = new Health(Stats.Hp);
+            Attacks = new List<Attack>(instanceData.Attacks);
         }
 
         public void Fainted()

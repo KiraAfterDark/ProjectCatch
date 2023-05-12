@@ -1,11 +1,12 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using ProjectCatch.Battle.Actions;
 using ProjectCatch.Battle.Ui;
-using ProjectCatch.Data.Pokemon;
-using ProjectCatch.Data.Trainers;
+using ProjectCatch.Gameplay;
 using ProjectCatch.Gameplay.Battle;
+using ProjectCatch.Gameplay.Items;
 using ProjectCatch.Gameplay.Pokemon;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -14,9 +15,9 @@ namespace ProjectCatch
 {
     public abstract class BattleTrainer : MonoBehaviour
     {
-        protected TrainerData data;
+        protected TrainerInstance instance;
 
-        public string Name => data.Name;
+        public string Name => instance.Name;
         
         protected BattlePokemon currentPokemon;
 
@@ -26,10 +27,10 @@ namespace ProjectCatch
 
         protected BattleUi battleUi;
         protected BattleController battleController;
+        
+        public List<PokemonInstance> Party => instance.Party;
 
-        protected List<PokemonInstance> party;
-
-        public bool HasRemainingPokemon => party.Count > 0;
+        public bool HasRemainingPokemon => Party.Count > 0;
 
         [Title("Prefabs")]
         
@@ -43,37 +44,65 @@ namespace ProjectCatch
         
         protected Transform pokemonSocket;
 
-        public void Init(TrainerData data, Transform pokemonSocket)
+        public void Init(TrainerInstance instance, Transform pokemonSocket)
         {
-            this.data = data;
+            // TODO Make this work with instance also make trainer instance
+            
+            this.instance = instance;
             this.pokemonSocket = pokemonSocket;
 
-            model = Instantiate(data.Model, modelSocket);
+            model = Instantiate(this.instance.Model, modelSocket);
 
             battleUi = BattleUi.Instance;
             battleController = BattleController.Instance;
-
-            party = new List<PokemonInstance>();
-            foreach (PokemonData pokemonData in data.PartyData)
-            {
-                if (party.Count >= 6)
-                {
-                    Debug.LogWarning("Cannot add more than 6 pokemon to party.", gameObject);
-                    break;
-                }
-                
-                PokemonInstance instance = new (pokemonData, 10);
-                party.Add(instance);
-            }
         }
 
-        public abstract void StartBattle(Action callback);
-
-        public abstract void SelectAction(Action<BattleAction> callback);
-
-        public void SelectPokemon(Action<PokemonInstance> callback)
+        public void StartBattle(Action callback)
         {
-            battleUi.SelectPokemon(party, callback);
+            UsePokemon(Party[0], callback);
+        }
+
+        public abstract void UsePokemon(PokemonInstance pokemon, Action callback);
+
+        public abstract void SelectAction(Action<BattleAction> actionSelectCallback);
+
+        public abstract void SelectPokemon(Action<PokemonInstance> callback, Action cancelCallback);
+
+        public void PokemonFainted(Action callback)
+        {
+            StartCoroutine(PokemonFaintedSequence(callback));
+        }
+
+        private IEnumerator PokemonFaintedSequence(Action callback)
+        {
+            BattlePokemon pokemon = currentPokemon;
+            Party.Remove(pokemon.Instance);
+            pokemon.Faint();
+            BattleUi.Instance.PokemonFainted(Name);
+
+            yield return new WaitForSeconds(2f);
+
+            callback?.Invoke();
+        }
+
+        public void SwitchPokemon(PokemonInstance switchTo, Action callback)
+        {
+            StartCoroutine(SwitchPokemonSequence(switchTo, callback));
+        }
+
+        private IEnumerator SwitchPokemonSequence(PokemonInstance switchTo, Action callback)
+        {
+            currentPokemon.SwitchOut();
+            battleUi.SwitchOut(currentPokemon.Name, Name);
+
+            yield return new WaitForSeconds(1.5f);
+            
+            UsePokemon(switchTo, callback);
+        }
+
+        public Inventory GetInventory()
+        {
+            return instance.Inventory;
         }
     }
 }

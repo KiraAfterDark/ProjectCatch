@@ -15,6 +15,9 @@ namespace ProjectCatch.Ui
         [SerializeField]
         private TextMeshProUGUI text;
 
+        [SerializeField]
+        private AttackInfoBox hoverAttackInfo;
+
         public void Init(Attack attack, Action<Attack> callback)
         {
             canSelect = true;
@@ -22,6 +25,11 @@ namespace ProjectCatch.Ui
 
             text.text = attack.Name;
             this.callback = callback;
+            
+            if (hoverAttackInfo)
+            {
+                hoverAttackInfo.gameObject.SetActive(false);
+            }
         }
 
         public void OnSelected()
@@ -31,7 +39,29 @@ namespace ProjectCatch.Ui
                 return;
             }
 
+            if (hoverAttackInfo)
+            {
+                hoverAttackInfo.gameObject.SetActive(false);
+            }
+
             callback?.Invoke(attack);
+        }
+
+        public void OnHighlightStart()
+        {
+            if (hoverAttackInfo)
+            {
+                hoverAttackInfo.gameObject.SetActive(true);
+                hoverAttackInfo.Show(attack);
+            }
+        }
+
+        public void OnHighlightEnd()
+        {
+            if (hoverAttackInfo)
+            {
+                hoverAttackInfo.gameObject.SetActive(false);
+            }
         }
     }
 }

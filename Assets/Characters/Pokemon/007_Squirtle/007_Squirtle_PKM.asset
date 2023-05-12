@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d14a5e706ed6a0740979514d8310d201, type: 3}
+  m_Name: 007_Squirtle_PKM
+  m_EditorClassIdentifier: 
+  dexNumber:
+    national: 7
+  name: Squirtle
+  typeOne: 2
+  typeTwo: 18
+  captureRate: 45
+  model: {fileID: 6534734748521607652, guid: 9f151cdf096222a46aac99714884e22e, type: 3}
+  icon: {fileID: 1213581395553820389, guid: c283fafbe87f2084d97bbe888c2998b2, type: 3}
+  evolutions: []
+  attacks:
+  - {fileID: 11400000, guid: 2fa1fe267161dbd489da9c86d7793a56, type: 2}
+  abilities: 
+  baseStats:
+    hp: 44
+    attack: 48
+    defense: 65
+    specialAttack: 50
+    specialDefense: 64
+    speed: 43

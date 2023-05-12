@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using ProjectCatch.Battle.Actions;
 using ProjectCatch.Data.Attacks;
 using ProjectCatch.Gameplay.Battle;
+using ProjectCatch.Gameplay.Items;
+using ProjectCatch.Gameplay.Items.Ui;
+using ProjectCatch.Gameplay.Pokemon;
+using ProjectCatch.Gameplay.Ui;
 using ProjectCatch.Ui;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace ProjectCatch
 {
@@ -17,6 +22,11 @@ namespace ProjectCatch
 
         private BattleTrainer battleTrainer;
 
+        [Title("Buttons")]
+
+        [SerializeField]
+        private GameObject initSelectedButton;
+
         [Title("Groups")]
 
         [SerializeField]
@@ -24,12 +34,12 @@ namespace ProjectCatch
 
         [SerializeField]
         private GameObject attackButtonGroup;
-
+        
         [Title("Containers")]
 
         [SerializeField]
         private List<AttackButton> attackButtons = new List<AttackButton>();
-
+        
         public void Init(BattleTrainer battleTrainer, Action<BattleAction> callback)
         {
             hasAction = false;
@@ -52,13 +62,20 @@ namespace ProjectCatch
 
             attackButtonGroup.SetActive(false);
             actionSelectGroup.SetActive(true);
+
+            EventSystem.current.SetSelectedGameObject(initSelectedButton);
         }
+        
+        #region Attack
         
         public void SelectAttack()
         {
             Debug.Log("Selecting Attack");
             actionSelectGroup.gameObject.SetActive(false);
             attackButtonGroup.gameObject.SetActive(true);
+            
+            EventSystem.current.SetSelectedGameObject(attackButtons[0].gameObject);
+            EventSystem.current.sendNavigationEvents = true;
         }
 
         private void OnAttackSelected(Attack attack)
@@ -78,5 +95,65 @@ namespace ProjectCatch
             
             callback?.Invoke(attackAction);
         }
+        
+        #endregion
+        
+        #region Switch
+
+        public void SelectSwitch()
+        {
+            Debug.Log("Selected Switch");
+            actionSelectGroup.gameObject.SetActive(false);
+
+            PartyManagerScreen.Instance.RequestPokemon(battleTrainer.Party, battleTrainer.CurrentPokemon, OnSwitchPokemonSelected, OnCancelSwitchPokemon);
+        }
+
+        private void OnSwitchPokemonSelected(PokemonInstance switchTo)
+        {
+            Debug.Log($"{battleTrainer.Name} switching {battleTrainer.CurrentPokemon.Name} for {switchTo.Name}");
+            SwapAction swap = new (battleTrainer, switchTo);
+            callback?.Invoke(swap);
+        }
+
+        private void OnCancelSwitchPokemon()
+        {
+            actionSelectGroup.gameObject.SetActive(true);
+        }
+        
+        #endregion
+
+        #region Item
+
+        public void SelectItemAction()
+        {
+            actionSelectGroup.gameObject.SetActive(false);
+            BagScreen.Instance.RequestItem(battleTrainer.GetInventory(), SelectItem, CancelSelectItem);
+        }
+
+        private void SelectItem(Item item)
+        {
+            actionSelectGroup.gameObject.SetActive(false);
+            
+            PartyManagerScreen.Instance.RequestPokemon(battleTrainer.Party, 
+                                                       null, 
+                                                       (pokemonInstance) => 
+                                                       {
+                                                           SelectItemTarget(item, pokemonInstance);
+                                                       }, 
+                                                       CancelSelectItem);
+        }
+
+        private void CancelSelectItem()
+        {
+            actionSelectGroup.gameObject.SetActive(true);
+        }
+
+        private void SelectItemTarget(Item item, PokemonInstance target)
+        {
+            ItemAction itemAction = new ItemAction(item, target, battleTrainer.CurrentPokemon);
+            callback.Invoke(itemAction);
+        }
+        
+        #endregion
     }
 }
