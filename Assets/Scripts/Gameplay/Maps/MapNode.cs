@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace ProjectCatch.Gameplay.Maps
 {
@@ -9,6 +11,8 @@ namespace ProjectCatch.Gameplay.Maps
         public List<MapNode> Next { get; }
         
         public Vector2Int Position { get; }
+        
+        public MapNodeType NodeType { get; }
 
         public MapNode(Vector2Int position)
         {
@@ -16,6 +20,8 @@ namespace ProjectCatch.Gameplay.Maps
             Prev = new List<MapNode>();
 
             Position = position;
+
+            NodeType = (MapNodeType)Random.Range(1, Enum.GetValues(typeof(MapNodeType)).Length);
         }
 
         public void AddNext(MapNode next)

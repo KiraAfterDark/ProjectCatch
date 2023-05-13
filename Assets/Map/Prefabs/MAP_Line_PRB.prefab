@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8478229280502765315}
   - component: {fileID: 8881776180662716485}
   m_Layer: 0
-  m_Name: LineRender
+  m_Name: MAP_Line_PRB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

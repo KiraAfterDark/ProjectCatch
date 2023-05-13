@@ -4,7 +4,7 @@ using UnityEngine;
 namespace ProjectCatch.Gameplay.Maps
 {
     [CreateAssetMenu(fileName = "New Map Properties", menuName = "Map/Properties", order = 0)]
-    public class MapProperties : ScriptableObject
+    public class MapProperties : SerializedScriptableObject
     {
         [Title("Map Properties")]
 
@@ -32,24 +32,8 @@ namespace ProjectCatch.Gameplay.Maps
 
         [Min(0)]
         [SerializeField]
-        private int incrementMax = 2;
+        private Vector2Int incrementMax = Vector2Int.one;
 
-        public int IncrementMax => incrementMax;
-
-        [Title("Map Visuals")]
-        [SerializeField]
-        private GameObject nodePrefab;
-
-        public GameObject NodePrefab => nodePrefab;
-
-        [SerializeField]
-        private LineRenderer lineRendererPrefab;
-
-        public LineRenderer LineRendererPrefab => lineRendererPrefab;
-
-        [SerializeField]
-        private Vector2 spacingMod = Vector2.one;
-
-        public Vector2 SpacingMod => spacingMod;
+        public Vector2Int IncrementMax => incrementMax;
     }
 }

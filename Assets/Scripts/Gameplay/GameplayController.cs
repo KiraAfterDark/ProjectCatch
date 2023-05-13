@@ -1,5 +1,6 @@
 using Fsi.Runtime;
 using ProjectCatch.Gameplay.Battle.Initializer;
+using ProjectCatch.Gameplay.Maps;
 using ProjectCatch.Gameplay.Pokemon.Types;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -35,22 +36,35 @@ namespace ProjectCatch.Gameplay
 
         #endregion
         
-        #region Battle Init
+        #region Battle Initializer
 
         private BattleInitializer battleInitializer;
         private bool isInitializerReady = false;
         
         #endregion
 
+        #region Map
+
+        public Map Map { get; private set; }
+
+        [Title("Map")]
+
+        [SerializeField]
+        private MapProperties mapProperties;
+
+        #endregion
+
         protected override void OnAwake()
         {
             playerTrainerInstance = new TrainerInstance(playerTrainerInstanceData);
-            PrepareBattle();
+            InitializeMap();
         }
 
-        private void PrepareBattle()
+        #region Battle 
+        
+        private void PrepareBattle(TrainerInstanceData enemyInstanceData)
         {
-            var enemyTrainerInstance = new TrainerInstance(enemyTrainerInstanceData);
+            var enemyTrainerInstance = new TrainerInstance(enemyInstanceData);
             battleInitializer = new TrainerBattleInitializer(playerTrainerInstance, enemyTrainerInstance);
             isInitializerReady = true;
         }
@@ -66,5 +80,16 @@ namespace ProjectCatch.Gameplay
             initializer = null;
             return false;
         }
+        
+        #endregion
+
+        #region Map
+
+        private void InitializeMap()
+        {
+            Map = new Map(mapProperties);
+        }
+        
+        #endregion
     }
 }

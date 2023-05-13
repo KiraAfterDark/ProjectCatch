@@ -5,12 +5,12 @@ namespace ProjectCatch.Gameplay.Maps
 {
     public class Map
     {
-        private MapProperties properties;
+        private readonly MapProperties properties;
         
         public MapNode Start { get; }
         public MapNode End { get; }
 
-        private Dictionary<Vector2Int, MapNode> Nodes;
+        private readonly Dictionary<Vector2Int, MapNode> nodes;
         
         public Map(MapProperties properties)
         {
@@ -18,7 +18,7 @@ namespace ProjectCatch.Gameplay.Maps
 
             Start = new MapNode(new Vector2Int(0, -1));
             End = new MapNode(new Vector2Int(0, properties.Size.y));
-            Nodes = new Dictionary<Vector2Int, MapNode>();
+            nodes = new Dictionary<Vector2Int, MapNode>();
             
             for (int i = 0; i < properties.Lines; i++)
             {
@@ -26,8 +26,8 @@ namespace ProjectCatch.Gameplay.Maps
             }
 
             // Removing empty branches
-            List<MapNode> nodes = new List<MapNode>(Nodes.Values);
-            foreach (MapNode node in nodes)
+            List<MapNode> n = new List<MapNode>(nodes.Values);
+            foreach (MapNode node in n)
             {
                 if (node.Next.Count == 0)
                 {
@@ -36,7 +36,7 @@ namespace ProjectCatch.Gameplay.Maps
                         prev.RemoveNext(node);
                     }
                     
-                    Nodes.Remove(node.Position);
+                    nodes.Remove(node.Position);
                 }
             }
         }
@@ -46,13 +46,15 @@ namespace ProjectCatch.Gameplay.Maps
             bool building = true;
             MapNode currentNode = startNode;
             int increment = 1;
-            Vector2Int pos = currentNode.Position + new Vector2Int(Random.Range(-properties.Size.x, properties.Size.x + 1), increment);
+            Vector2Int pos = currentNode.Position 
+                             + new Vector2Int(Random.Range(-properties.Size.x, properties.Size.x + 1)
+                                                                   , increment);
             while(building)
             {
-                if (!Nodes.TryGetValue(pos, out MapNode node))
+                if (!nodes.TryGetValue(pos, out MapNode node))
                 {
                     node = new MapNode(pos);
-                    Nodes.Add(pos, node);
+                    nodes.Add(pos, node);
                 }
                 
                 currentNode.AddNext(node);
@@ -60,7 +62,7 @@ namespace ProjectCatch.Gameplay.Maps
 
                 for (int i = 0; i < properties.SplitAttempts; i++)
                 {
-                    increment = Random.Range(1, properties.IncrementMax + 1);
+                    increment = GetYIncrement();
 
                     if (node.Position.y + increment >= properties.Size.y)
                     {
@@ -69,13 +71,12 @@ namespace ProjectCatch.Gameplay.Maps
                     
                     if (Random.Range(0, 1.0f) < properties.SplitChance)
                     {
-                        Vector2Int extraPos = currentNode.Position +
-                                              new Vector2Int(Random.Range(-properties.Size.x, properties.Size.x),
-                                                             increment);
-                        if (!Nodes.TryGetValue(extraPos, out MapNode extra))
+                        Vector2Int extraPos = currentNode.Position 
+                                              + new Vector2Int(GetXIncrement(currentNode.Position.x), increment);
+                        if (!nodes.TryGetValue(extraPos, out MapNode extra))
                         {
                             extra = new MapNode(extraPos);
-                            Nodes.Add(extraPos, extra);
+                            nodes.Add(extraPos, extra);
                         }
 
                         currentNode.AddNext(extra);
@@ -85,10 +86,10 @@ namespace ProjectCatch.Gameplay.Maps
 
                 currentNode = node;
 
-                increment = Random.Range(1, properties.IncrementMax + 1);
+                increment = GetYIncrement();
                 if (node.Position.y + increment < properties.Size.y)
                 {
-                    pos.x = Random.Range(-properties.Size.x, properties.Size.x + 1);
+                    pos.x = currentNode.Position.x + GetXIncrement(currentNode.Position.x);
                     pos.y += increment;
                 }
                 else
@@ -100,14 +101,38 @@ namespace ProjectCatch.Gameplay.Maps
             }
         }
 
+        private int GetYIncrement()
+        {
+            return Random.Range(1, properties.IncrementMax.y + 1);
+        }
+
+        private int GetXIncrement(int xPos)
+        {
+            int min = -properties.IncrementMax.x;
+            int max = properties.IncrementMax.x;
+
+            if (xPos <= -properties.Size.x)
+            {
+                min = 0;
+            }
+
+            if (xPos >= properties.Size.x)
+            {
+                max = 0;
+            }
+
+            int increment = Random.Range(min, max + 1);
+            return increment;
+        }
+
         public List<MapNode> GetAllNodes()
         {
-            List<MapNode> nodes = new ();
-            nodes.Add(Start);
-            nodes.AddRange(Nodes.Values);
-            nodes.Add(End);
+            List<MapNode> n = new ();
+            n.Add(Start);
+            n.AddRange(nodes.Values);
+            n.Add(End);
 
-            return nodes;
+            return n;
         }
     }
 }
