@@ -55,7 +55,8 @@ namespace ProjectCatch.Gameplay.Maps.MapViews
             {
                 MapViewNode node = Instantiate(properties.MapNodePrefabs[mapNode.NodeType], transform);
                 node.Initialize(mapNode);
-                node.transform.position = new Vector3(mapNode.Position.x, mapNode.Position.y, 0) * properties.SpacingMod;
+                Vector3 position = Vector3.Scale(mapNode.FlatPosition, properties.SpacingMod);
+                node.transform.position = position;
             
                 mapNodeObjects.Add(node);
             
@@ -63,8 +64,7 @@ namespace ProjectCatch.Gameplay.Maps.MapViews
                 {
                     LineRenderer line = Instantiate(properties.LineRendererPrefabs[connection.Type], transform);
                     line.SetPosition(0, node.transform.position);
-                    line.SetPosition(1, new Vector3(connection.To.Position.x, 
-                                                    connection.To.Position.y, 0) * properties.SpacingMod);
+                    line.SetPosition(1, Vector3.Scale(connection.To.FlatPosition, properties.SpacingMod));
             
                     lines.Add(line);
                 }
@@ -91,7 +91,7 @@ namespace ProjectCatch.Gameplay.Maps.MapViews
 
                 node.Initialize(mapNode);
 
-                node.transform.position = new Vector3(mapNode.Position.x, mapNode.Position.y, 0) * properties.SpacingMod;
+                node.transform.position = Vector3.Scale(mapNode.FlatPosition , properties.SpacingMod);
             
                 mapNodeObjects.Add(node);
             
@@ -99,8 +99,7 @@ namespace ProjectCatch.Gameplay.Maps.MapViews
                 {
                     LineRenderer line = Instantiate(properties.LineRendererPrefabs[connection.Type], transform);
                     line.SetPosition(0, node.transform.position);
-                    line.SetPosition(1, new Vector3(connection.To.Position.x, 
-                                                    connection.To.Position.y, 0) * properties.SpacingMod);
+                    line.SetPosition(1, Vector3.Scale(connection.To.FlatPosition, properties.SpacingMod));
             
                     lines.Add(line);
                 }

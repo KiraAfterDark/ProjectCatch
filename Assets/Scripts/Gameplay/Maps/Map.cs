@@ -29,7 +29,7 @@ namespace ProjectCatch.Gameplay.Maps
             List<MapNode> n = new List<MapNode>(nodes.Values);
             foreach (MapNode node in n)
             {
-                if (node.Next.Count == 0)
+                if (node.Connections.Count == 0)
                 {
                     foreach (MapNode prev in node.Prev)
                     {

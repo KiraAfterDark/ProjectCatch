@@ -28,8 +28,8 @@ namespace ProjectCatch.Gameplay.Maps.MapViews
         public Dictionary<MapConnectionType, LineRenderer> LineRendererPrefabs => lineRendererPrefabs;
 
         [SerializeField]
-        private Vector2 spacingMod = Vector2.one;
+        private Vector3 spacingMod = Vector2.one;
 
-        public Vector2 SpacingMod => spacingMod;
+        public Vector3 SpacingMod => spacingMod;
     }
 }

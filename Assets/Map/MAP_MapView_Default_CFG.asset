@@ -232,4 +232,4 @@ MonoBehaviour:
       Data: 
   currentNodePrefab: {fileID: 6276158165109063950, guid: 681be1fad0829844694d8251ec89a9c0,
     type: 3}
-  spacingMod: {x: 3, y: 5}
+  spacingMod: {x: 3, y: 0, z: 5}

@@ -8,17 +8,17 @@ namespace ProjectCatch.Gameplay.Maps
     public class MapNode
     {
         public List<MapNode> Prev { get; }
-        public List<MapNode> Next { get; }
-        
         public List<MapConnection> Connections { get; }
         
         public Vector2Int Position { get; }
+
+        public Vector3 FlatPosition => new Vector3(Position.x, 0, Position.y);
+        public Vector2 VerticalPosition => new Vector2(Position.x, Position.y);
         
         public MapNodeType NodeType { get; }
 
         public MapNode(Vector2Int position)
         {
-            Next = new List<MapNode>();
             Prev = new List<MapNode>();
             Connections = new List<MapConnection>();
 
@@ -27,47 +27,63 @@ namespace ProjectCatch.Gameplay.Maps
             NodeType = (MapNodeType)Random.Range(1, Enum.GetValues(typeof(MapNodeType)).Length);
         }
 
-        public void AddNext(MapNode next, params MapConnectionType[] availableConnections)
+        #region Add/Remove
+        
+        public bool AddNext(MapNode next, params MapConnectionType[] availableConnections)
         {
-            if (!Next.Contains(next))
+            foreach (MapConnection connection in Connections)
             {
-                Next.Add(next);
-
-                MapConnection connection = new (this, next, availableConnections);
-                Connections.Add(connection);
+                if (connection.To == next)
+                {
+                    Debug.LogWarning($"Node ({Position}) already has connection to Node ({next.Position}).");
+                    return false;
+                }
             }
+            
+            MapConnection c = new (this, next, availableConnections);
+            Connections.Add(c);
+            return true;
         }
 
-        public void AddPrev(MapNode prev)
+        public bool AddPrev(MapNode prev)
         {
             if (!Prev.Contains(prev))
             {
                 Prev.Add(prev);
+                return true;
             }
+
+            return false;
         }
 
-        public void RemoveNext(MapNode next)
+        public bool RemoveNext(MapNode next)
         {
-            if (Next.Contains(next))
+            foreach(MapConnection connection in Connections)
             {
-                Next.Remove(next);
-
-                var check = new List<MapConnection>(Connections);
-                foreach (MapConnection connection in check)
+                if (connection.To == next)
                 {
-                    if (connection.To == next)
-                    {
-                        Connections.Remove(connection);
-                    }
+                    Connections.Remove(connection);
+                    return true;
                 }
             }
+
+            Debug.LogWarning($"Node ({Position}) is not connected to Node ({next.Position}).");
+            return false;
         }
 
-        public void RemovePrev(MapNode prev)
+        public bool RemovePrev(MapNode prev)
         {
-            Prev.Remove(prev);
-        }
+            if (Prev.Contains(prev))
+            {
+                Prev.Remove(prev);
+                return true;
+            }
 
+            return false;
+        }
+        
+        #endregion
+        
         public override string ToString()
         {
             string s = $"{NodeType} - {Position} - Connections: {Connections.Count}";

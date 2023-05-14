@@ -3,19 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0afdf038-2cdd-4c73-877b-256fa80e1345" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectCatch/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectCatch/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/PlayerInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input/PlayerInput.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/PlayerInput.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Map/MAP_Default_CFG.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Map/MAP_Default_CFG.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Map/MAP_MapView_Default_CFG.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Map/MAP_MapView_Default_CFG.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Default_PRB.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Default_PRB.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Nodes/MAP_Node_Base_PRB.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Map/Prefabs/Nodes/MAP_Node_Base_PRB.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prototyping/Gradient/PROTO_Gradient_Selected_MAT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prototyping/Gradient/PROTO_Gradient_Selected_MAT.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Debugging/MapDebugging.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Debugging/MapDebugging.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game/Maps/Map_SCN.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game/Maps/Map_SCN.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/Map.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapNode.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapViews/MapView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapViews/MapView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapViews/MapViewProperties.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapViews/MapViewProperties.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapViews/Nodes/MapViewNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapViews/Nodes/MapViewNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,7 +121,7 @@
       <workItem from="1682876692515" duration="9718000" />
       <workItem from="1682891823707" duration="31000" />
       <workItem from="1683918675193" duration="7848000" />
-      <workItem from="1684065833051" duration="5882000" />
+      <workItem from="1684065833051" duration="7794000" />
     </task>
     <servers />
   </component>
