@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using ProjectCatch.Gameplay.Maps.MapViews.Nodes;
 using Sirenix.OdinInspector;
 using UnityEngine;
 // ReSharper disable FieldCanBeMadeReadOnly.Local
@@ -10,15 +11,15 @@ namespace ProjectCatch.Gameplay.Maps.MapViews
     {
         [Title("Map View")]
         [SerializeField]
-        private Dictionary<MapNodeType, GameObject> mapNodePrefabs = 
-            new Dictionary<MapNodeType, GameObject>();
+        private Dictionary<MapNodeType, MapViewNode> mapNodePrefabs = 
+            new Dictionary<MapNodeType, MapViewNode>();
 
-        public Dictionary<MapNodeType, GameObject> MapNodePrefabs => mapNodePrefabs;
+        public Dictionary<MapNodeType, MapViewNode> MapNodePrefabs => mapNodePrefabs;
         
         [SerializeField]
-        private GameObject currentNodePrefab;
+        private MapViewNode currentNodePrefab;
 
-        public GameObject CurrentNodePrefab => currentNodePrefab;
+        public MapViewNode CurrentNodePrefab => currentNodePrefab;
 
         [SerializeField]
         private Dictionary<MapConnectionType, LineRenderer> lineRendererPrefabs =

@@ -16,13 +16,13 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 842757921561252425, guid: 6cb9868bfe9ca694f82d01ca201b0332, type: 3}
-    - {fileID: 8991818758318573812, guid: 39f726c45db7be64ebd3b422a4313133, type: 3}
-    - {fileID: 6182715337869049775, guid: 9a281fe3d43416b43aa73dcf45bbfdc0, type: 3}
-    - {fileID: 6273530274615920350, guid: f587c0ef75e1fdc44b53dfcf1cc53e3b, type: 3}
-    - {fileID: 7705140644906581907, guid: 77ae8918ab1d03d4481a9015ca08bbf2, type: 3}
-    - {fileID: 3206213617604761220, guid: 638e73835dc18664e96286f883519317, type: 3}
-    - {fileID: 4926375016544328081, guid: 8fdb1962207619c4bbb0aeb2269b6c59, type: 3}
+    - {fileID: 1235280619883316561, guid: 6cb9868bfe9ca694f82d01ca201b0332, type: 3}
+    - {fileID: 7376845017750052844, guid: 39f726c45db7be64ebd3b422a4313133, type: 3}
+    - {fileID: 5718410610611644599, guid: 9a281fe3d43416b43aa73dcf45bbfdc0, type: 3}
+    - {fileID: 5586298052999369158, guid: f587c0ef75e1fdc44b53dfcf1cc53e3b, type: 3}
+    - {fileID: 8104406093998549131, guid: 77ae8918ab1d03d4481a9015ca08bbf2, type: 3}
+    - {fileID: 3956492248275075484, guid: 638e73835dc18664e96286f883519317, type: 3}
+    - {fileID: 6830681943418605193, guid: 8fdb1962207619c4bbb0aeb2269b6c59, type: 3}
     - {fileID: 8881776180662716485, guid: 4f31a4e353e8f7349b44af549644f2b8, type: 3}
     - {fileID: 1330029934163735951, guid: 285f481221f18a34086a565277d7e2de, type: 3}
     - {fileID: 7785967239895426888, guid: 0a399eb4588cd4e489c2d3e2d8982326, type: 3}
@@ -36,7 +36,8 @@ MonoBehaviour:
     - Name: mapNodePrefabs
       Entry: 7
       Data: 0|System.Collections.Generic.Dictionary`2[[ProjectCatch.Gameplay.Maps.MapNodeType,
-        Assembly-CSharp],[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib
+        Assembly-CSharp],[ProjectCatch.Gameplay.Maps.MapViews.Nodes.MapViewNode,
+        Assembly-CSharp]], mscorlib
     - Name: comparer
       Entry: 7
       Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[ProjectCatch.Gameplay.Maps.MapNodeType,
@@ -229,4 +230,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  currentNodePrefab: {fileID: 6276158165109063950, guid: 681be1fad0829844694d8251ec89a9c0,
+    type: 3}
   spacingMod: {x: 3, y: 5}

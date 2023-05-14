@@ -67,5 +67,11 @@ namespace ProjectCatch.Gameplay.Maps
         {
             Prev.Remove(prev);
         }
+
+        public override string ToString()
+        {
+            string s = $"{NodeType} - {Position} - Connections: {Connections.Count}";
+            return s;
+        }
     }
 }

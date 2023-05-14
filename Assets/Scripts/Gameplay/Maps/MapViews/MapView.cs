@@ -1,4 +1,7 @@
+using System;
 using System.Collections.Generic;
+using ProjectCatch.Gameplay.Maps.MapViews.Nodes;
+using ProjectCatch.Input;
 using UnityEngine;
 
 namespace ProjectCatch.Gameplay.Maps.MapViews
@@ -8,17 +11,38 @@ namespace ProjectCatch.Gameplay.Maps.MapViews
         [SerializeField]
         private MapViewProperties properties;
 
-        private readonly List<GameObject> mapNodeObjects = new List<GameObject>();
+        private readonly List<MapViewNode> mapNodeObjects = new List<MapViewNode>();
         private readonly List<LineRenderer> lines = new List<LineRenderer>();
+
+        private PlayerInput playerInput;
 
         private void Awake()
         {
+            InitializeInput();
+            
             ClearMap();
+        }
+
+        private void OnEnable()
+        {
+            playerInput.Map.Enable();
+        }
+
+        private void OnDisable()
+        {
+            playerInput.Map.Disable();
         }
 
         private void Start()
         {
             DrawMap(GameplayController.Instance.Map);
+        }
+
+        private void InitializeInput()
+        {
+            playerInput = new PlayerInput();
+
+            playerInput.Map.Select.performed += ctx => Select();
         }
         
         public void DrawMap(Map map)
@@ -29,7 +53,8 @@ namespace ProjectCatch.Gameplay.Maps.MapViews
 
             foreach (MapNode mapNode in mapNodes)
             {
-                GameObject node = Instantiate(properties.MapNodePrefabs[mapNode.NodeType], transform);
+                MapViewNode node = Instantiate(properties.MapNodePrefabs[mapNode.NodeType], transform);
+                node.Initialize(mapNode);
                 node.transform.position = new Vector3(mapNode.Position.x, mapNode.Position.y, 0) * properties.SpacingMod;
             
                 mapNodeObjects.Add(node);
@@ -54,7 +79,7 @@ namespace ProjectCatch.Gameplay.Maps.MapViews
 
             foreach (MapNode mapNode in mapNodes)
             {
-                GameObject node;
+                MapViewNode node;
                 if (mapNode == currentNode)
                 {
                     node = Instantiate(properties.CurrentNodePrefab, transform);
@@ -63,6 +88,8 @@ namespace ProjectCatch.Gameplay.Maps.MapViews
                 {
                     node = Instantiate(properties.MapNodePrefabs[mapNode.NodeType], transform);
                 }
+
+                node.Initialize(mapNode);
 
                 node.transform.position = new Vector3(mapNode.Position.x, mapNode.Position.y, 0) * properties.SpacingMod;
             
@@ -82,9 +109,9 @@ namespace ProjectCatch.Gameplay.Maps.MapViews
         
         public void ClearMap()
         {
-            foreach (GameObject mapNodeObject in mapNodeObjects)
+            foreach (MapViewNode mapNodeObject in mapNodeObjects)
             {
-                DestroyImmediate(mapNodeObject);
+                DestroyImmediate(mapNodeObject.gameObject);
             }
 
             mapNodeObjects.Clear();
@@ -93,8 +120,38 @@ namespace ProjectCatch.Gameplay.Maps.MapViews
             {
                 DestroyImmediate(line.gameObject);
             }
-            
+
             lines.Clear();
+        }
+
+        private void Select()
+        {
+            Debug.Log("Boop");
+            var pos = playerInput.Map.Position.ReadValue<Vector2>();
+
+            if (Camera.main != null)
+            {
+                Debug.Log("Blah");
+                Ray ray = Camera.main.ScreenPointToRay(pos);
+
+                if (Physics.Raycast(ray, out RaycastHit hit))
+                {
+                    if(hit.collider.TryGetComponent(out MapViewNode mapViewNode))
+                    {
+                        Debug.DrawRay(ray.origin, ray.direction * 500, Color.green, 2);
+                        MapNode node = mapViewNode.MapNode;
+                        Debug.Log(node.ToString());
+                    }
+                    else
+                    {
+                        Debug.DrawRay(ray.origin, ray.direction * 500, Color.red, 2);
+                    }
+                }
+                else
+                {
+                    Debug.DrawRay(ray.origin, ray.direction * 500, Color.red, 2);
+                }
+            }
         }
     }
 }

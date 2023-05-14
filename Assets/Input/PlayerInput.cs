@@ -317,6 +317,54 @@ namespace ProjectCatch.Input
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Map"",
+            ""id"": ""7a7d9862-c608-4dec-9b2b-df665fac1dcd"",
+            ""actions"": [
+                {
+                    ""name"": ""Select"",
+                    ""type"": ""Button"",
+                    ""id"": ""89bc15ac-9ecd-43c0-bf54-2f12f2515c87"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Position"",
+                    ""type"": ""Value"",
+                    ""id"": ""a6ce75e8-fa01-47d9-82fc-5bfd5c79a93a"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""de0ae798-fa2b-4e12-a502-5940237b083a"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Default"",
+                    ""action"": ""Select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""61763902-2c04-455b-965e-2fa5d49549e1"",
+                    ""path"": ""<Pointer>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Default"",
+                    ""action"": ""Position"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -351,6 +399,10 @@ namespace ProjectCatch.Input
             m_Battle_Point = m_Battle.FindAction("Point", throwIfNotFound: true);
             m_Battle_LeftClick = m_Battle.FindAction("Left Click", throwIfNotFound: true);
             m_Battle_RightClick = m_Battle.FindAction("Right Click", throwIfNotFound: true);
+            // Map
+            m_Map = asset.FindActionMap("Map", throwIfNotFound: true);
+            m_Map_Select = m_Map.FindAction("Select", throwIfNotFound: true);
+            m_Map_Position = m_Map.FindAction("Position", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -494,6 +546,60 @@ namespace ProjectCatch.Input
             }
         }
         public BattleActions @Battle => new BattleActions(this);
+
+        // Map
+        private readonly InputActionMap m_Map;
+        private List<IMapActions> m_MapActionsCallbackInterfaces = new List<IMapActions>();
+        private readonly InputAction m_Map_Select;
+        private readonly InputAction m_Map_Position;
+        public struct MapActions
+        {
+            private @PlayerInput m_Wrapper;
+            public MapActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+            public InputAction @Select => m_Wrapper.m_Map_Select;
+            public InputAction @Position => m_Wrapper.m_Map_Position;
+            public InputActionMap Get() { return m_Wrapper.m_Map; }
+            public void Enable() { Get().Enable(); }
+            public void Disable() { Get().Disable(); }
+            public bool enabled => Get().enabled;
+            public static implicit operator InputActionMap(MapActions set) { return set.Get(); }
+            public void AddCallbacks(IMapActions instance)
+            {
+                if (instance == null || m_Wrapper.m_MapActionsCallbackInterfaces.Contains(instance)) return;
+                m_Wrapper.m_MapActionsCallbackInterfaces.Add(instance);
+                @Select.started += instance.OnSelect;
+                @Select.performed += instance.OnSelect;
+                @Select.canceled += instance.OnSelect;
+                @Position.started += instance.OnPosition;
+                @Position.performed += instance.OnPosition;
+                @Position.canceled += instance.OnPosition;
+            }
+
+            private void UnregisterCallbacks(IMapActions instance)
+            {
+                @Select.started -= instance.OnSelect;
+                @Select.performed -= instance.OnSelect;
+                @Select.canceled -= instance.OnSelect;
+                @Position.started -= instance.OnPosition;
+                @Position.performed -= instance.OnPosition;
+                @Position.canceled -= instance.OnPosition;
+            }
+
+            public void RemoveCallbacks(IMapActions instance)
+            {
+                if (m_Wrapper.m_MapActionsCallbackInterfaces.Remove(instance))
+                    UnregisterCallbacks(instance);
+            }
+
+            public void SetCallbacks(IMapActions instance)
+            {
+                foreach (var item in m_Wrapper.m_MapActionsCallbackInterfaces)
+                    UnregisterCallbacks(item);
+                m_Wrapper.m_MapActionsCallbackInterfaces.Clear();
+                AddCallbacks(instance);
+            }
+        }
+        public MapActions @Map => new MapActions(this);
         private int m_DefaultSchemeIndex = -1;
         public InputControlScheme DefaultScheme
         {
@@ -511,6 +617,11 @@ namespace ProjectCatch.Input
             void OnPoint(InputAction.CallbackContext context);
             void OnLeftClick(InputAction.CallbackContext context);
             void OnRightClick(InputAction.CallbackContext context);
+        }
+        public interface IMapActions
+        {
+            void OnSelect(InputAction.CallbackContext context);
+            void OnPosition(InputAction.CallbackContext context);
         }
     }
 }
