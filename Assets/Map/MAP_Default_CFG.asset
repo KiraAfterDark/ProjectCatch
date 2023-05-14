@@ -26,3 +26,5 @@ MonoBehaviour:
   splitChance: 0.375
   splitAttempts: 5
   incrementMax: {x: 1, y: 1}
+  walkableConnections: 0100000002000000
+  specialConnections: 03000000040000000100000002000000

@@ -57,16 +57,17 @@ namespace ProjectCatch.Gameplay.Maps
                     nodes.Add(pos, node);
                 }
                 
-                currentNode.AddNext(node);
+                currentNode.AddNext(node, properties.WalkableConnections.ToArray());
                 node.AddPrev(currentNode);
 
+                // Try to split path
                 for (int i = 0; i < properties.SplitAttempts; i++)
                 {
                     increment = GetYIncrement();
 
-                    if (node.Position.y + increment >= properties.Size.y)
+                    if (node.Position.y + increment >= properties.Size.y - 1)
                     {
-                        continue;
+                        break;
                     }
                     
                     if (Random.Range(0, 1.0f) < properties.SplitChance)
@@ -78,8 +79,8 @@ namespace ProjectCatch.Gameplay.Maps
                             extra = new MapNode(extraPos);
                             nodes.Add(extraPos, extra);
                         }
-
-                        currentNode.AddNext(extra);
+                        
+                        currentNode.AddNext(extra, properties.SpecialConnections.ToArray());
                         extra.AddPrev(currentNode);
                     }
                 }
@@ -94,7 +95,7 @@ namespace ProjectCatch.Gameplay.Maps
                 }
                 else
                 {
-                    node.AddNext(End);
+                    node.AddNext(End, properties.WalkableConnections.ToArray());
                     End.AddPrev(node);
                     building = false;
                 }

@@ -23,6 +23,11 @@ MonoBehaviour:
     - {fileID: 7705140644906581907, guid: 77ae8918ab1d03d4481a9015ca08bbf2, type: 3}
     - {fileID: 3206213617604761220, guid: 638e73835dc18664e96286f883519317, type: 3}
     - {fileID: 4926375016544328081, guid: 8fdb1962207619c4bbb0aeb2269b6c59, type: 3}
+    - {fileID: 8881776180662716485, guid: 4f31a4e353e8f7349b44af549644f2b8, type: 3}
+    - {fileID: 1330029934163735951, guid: 285f481221f18a34086a565277d7e2de, type: 3}
+    - {fileID: 7785967239895426888, guid: 0a399eb4588cd4e489c2d3e2d8982326, type: 3}
+    - {fileID: 5633603654874423856, guid: 79d6be63605d11a4e8049da787879b87, type: 3}
+    - {fileID: 7881339656161800126, guid: 0b7e78325e0b6b84f9ba2385fb398892, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -138,6 +143,90 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  lineRendererPrefab: {fileID: 8881776180662716485, guid: 4f31a4e353e8f7349b44af549644f2b8,
-    type: 3}
+    - Name: lineRendererPrefabs
+      Entry: 7
+      Data: 2|System.Collections.Generic.Dictionary`2[[ProjectCatch.Gameplay.Maps.MapConnectionType,
+        Assembly-CSharp],[UnityEngine.LineRenderer, UnityEngine.CoreModule]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 3|System.Collections.Generic.EnumEqualityComparer`1[[ProjectCatch.Gameplay.Maps.MapConnectionType,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 10
+      Data: 7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 10
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 10
+      Data: 9
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 3
+    - Name: $v
+      Entry: 10
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4
+    - Name: $v
+      Entry: 10
+      Data: 11
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   spacingMod: {x: 3, y: 5}

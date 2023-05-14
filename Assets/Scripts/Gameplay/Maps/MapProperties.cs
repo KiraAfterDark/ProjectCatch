@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -35,5 +36,17 @@ namespace ProjectCatch.Gameplay.Maps
         private Vector2Int incrementMax = Vector2Int.one;
 
         public Vector2Int IncrementMax => incrementMax;
+
+        [Title("Connections")]
+
+        [SerializeField]
+        private List<MapConnectionType> walkableConnections = new List<MapConnectionType>();
+
+        public List<MapConnectionType> WalkableConnections => walkableConnections;
+
+        [SerializeField]
+        private List<MapConnectionType> specialConnections = new List<MapConnectionType>();
+
+        public List<MapConnectionType> SpecialConnections => specialConnections;
     }
 }

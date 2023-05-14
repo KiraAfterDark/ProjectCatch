@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -35,11 +34,12 @@ namespace ProjectCatch.Gameplay.Maps.MapViews
             
                 mapNodeObjects.Add(node);
             
-                foreach (MapNode next in mapNode.Next)
+                foreach (MapConnection connection in mapNode.Connections)
                 {
-                    LineRenderer line = Instantiate(properties.LineRendererPrefab, transform);
+                    LineRenderer line = Instantiate(properties.LineRendererPrefabs[connection.Type], transform);
                     line.SetPosition(0, node.transform.position);
-                    line.SetPosition(1, new Vector3(next.Position.x, next.Position.y, 0) * properties.SpacingMod);
+                    line.SetPosition(1, new Vector3(connection.To.Position.x, 
+                                                    connection.To.Position.y, 0) * properties.SpacingMod);
             
                     lines.Add(line);
                 }
@@ -48,7 +48,36 @@ namespace ProjectCatch.Gameplay.Maps.MapViews
 
         public void DrawMap(Map map, MapNode currentNode)
         {
+            ClearMap();
             
+            List<MapNode> mapNodes = map.GetAllNodes();
+
+            foreach (MapNode mapNode in mapNodes)
+            {
+                GameObject node;
+                if (mapNode == currentNode)
+                {
+                    node = Instantiate(properties.CurrentNodePrefab, transform);
+                }
+                else
+                {
+                    node = Instantiate(properties.MapNodePrefabs[mapNode.NodeType], transform);
+                }
+
+                node.transform.position = new Vector3(mapNode.Position.x, mapNode.Position.y, 0) * properties.SpacingMod;
+            
+                mapNodeObjects.Add(node);
+            
+                foreach (MapConnection connection in mapNode.Connections)
+                {
+                    LineRenderer line = Instantiate(properties.LineRendererPrefabs[connection.Type], transform);
+                    line.SetPosition(0, node.transform.position);
+                    line.SetPosition(1, new Vector3(connection.To.Position.x, 
+                                                    connection.To.Position.y, 0) * properties.SpacingMod);
+            
+                    lines.Add(line);
+                }
+            }
         }
         
         public void ClearMap()
