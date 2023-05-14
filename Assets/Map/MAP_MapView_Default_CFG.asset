@@ -21,13 +21,13 @@ MonoBehaviour:
     - {fileID: 5718410610611644599, guid: 9a281fe3d43416b43aa73dcf45bbfdc0, type: 3}
     - {fileID: 5586298052999369158, guid: f587c0ef75e1fdc44b53dfcf1cc53e3b, type: 3}
     - {fileID: 8104406093998549131, guid: 77ae8918ab1d03d4481a9015ca08bbf2, type: 3}
-    - {fileID: 3956492248275075484, guid: 638e73835dc18664e96286f883519317, type: 3}
-    - {fileID: 6830681943418605193, guid: 8fdb1962207619c4bbb0aeb2269b6c59, type: 3}
-    - {fileID: 8881776180662716485, guid: 4f31a4e353e8f7349b44af549644f2b8, type: 3}
-    - {fileID: 1330029934163735951, guid: 285f481221f18a34086a565277d7e2de, type: 3}
-    - {fileID: 7785967239895426888, guid: 0a399eb4588cd4e489c2d3e2d8982326, type: 3}
-    - {fileID: 5633603654874423856, guid: 79d6be63605d11a4e8049da787879b87, type: 3}
-    - {fileID: 7881339656161800126, guid: 0b7e78325e0b6b84f9ba2385fb398892, type: 3}
+    - {fileID: 7376845017750052844, guid: 210f7bf721334ea46881185e9fb02442, type: 3}
+    - {fileID: 7376845017750052844, guid: 9bb676d04591ff441a827cc4ecf4e54a, type: 3}
+    - {fileID: 6049001202210563132, guid: 14869152bbaf4dc4bb18eb3da8a87a98, type: 3}
+    - {fileID: 6708988277128406212, guid: b83b53fe650ddc3458cbf8e0ded23dbc, type: 3}
+    - {fileID: 6708988277128406212, guid: b8fbb24b222fac245a38544a5fde372e, type: 3}
+    - {fileID: 6708988277128406212, guid: 1ab0e08475ef9c448a6ccc0b7df164a0, type: 3}
+    - {fileID: 6708988277128406212, guid: 5bc31c641a6f2924b87c95616cb32646, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -144,10 +144,11 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: lineRendererPrefabs
+    - Name: connectionPrefabs
       Entry: 7
       Data: 2|System.Collections.Generic.Dictionary`2[[ProjectCatch.Gameplay.Maps.MapConnectionType,
-        Assembly-CSharp],[UnityEngine.LineRenderer, UnityEngine.CoreModule]], mscorlib
+        Assembly-CSharp],[ProjectCatch.Gameplay.Maps.MapViews.Connections.MapViewConnection,
+        Assembly-CSharp]], mscorlib
     - Name: comparer
       Entry: 7
       Data: 3|System.Collections.Generic.EnumEqualityComparer`1[[ProjectCatch.Gameplay.Maps.MapConnectionType,

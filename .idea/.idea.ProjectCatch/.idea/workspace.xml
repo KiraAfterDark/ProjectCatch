@@ -3,12 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="0afdf038-2cdd-4c73-877b-256fa80e1345" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectCatch/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectCatch/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/Map.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/MAP_MapView_Default_CFG.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Map/MAP_MapView_Default_CFG.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Cave_PRB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Cave_PRB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Default_PRB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Default_PRB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Grass_PRB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Grass_PRB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Water_PRB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Water_PRB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Waterfall_PRB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Waterfall_PRB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Debugging/MapDebugging.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Debugging/MapDebugging.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapViews/MapView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapViews/MapView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapViews/MapViewProperties.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapViews/MapViewProperties.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Balanced-Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-Balanced-Renderer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity-Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity-Renderer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Performant-Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-Performant-Renderer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +133,7 @@
       <workItem from="1682876692515" duration="9718000" />
       <workItem from="1682891823707" duration="31000" />
       <workItem from="1683918675193" duration="7848000" />
-      <workItem from="1684065833051" duration="7794000" />
+      <workItem from="1684065833051" duration="10632000" />
     </task>
     <servers />
   </component>

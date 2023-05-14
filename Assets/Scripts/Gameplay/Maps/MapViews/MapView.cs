@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using ProjectCatch.Gameplay.Maps.MapViews.Connections;
 using ProjectCatch.Gameplay.Maps.MapViews.Nodes;
 using ProjectCatch.Input;
 using UnityEngine;
@@ -12,7 +13,7 @@ namespace ProjectCatch.Gameplay.Maps.MapViews
         private MapViewProperties properties;
 
         private readonly List<MapViewNode> mapNodeObjects = new List<MapViewNode>();
-        private readonly List<LineRenderer> lines = new List<LineRenderer>();
+        private readonly List<MapViewConnection> lines = new List<MapViewConnection>();
 
         private PlayerInput playerInput;
 
@@ -62,11 +63,7 @@ namespace ProjectCatch.Gameplay.Maps.MapViews
             
                 foreach (MapConnection connection in mapNode.Connections)
                 {
-                    LineRenderer line = Instantiate(properties.LineRendererPrefabs[connection.Type], transform);
-                    line.SetPosition(0, node.transform.position);
-                    line.SetPosition(1, Vector3.Scale(connection.To.FlatPosition, properties.SpacingMod));
-            
-                    lines.Add(line);
+                    AddLine(properties.ConnectionPrefabs[connection.Type], connection);
                 }
             }
         }
@@ -97,15 +94,11 @@ namespace ProjectCatch.Gameplay.Maps.MapViews
             
                 foreach (MapConnection connection in mapNode.Connections)
                 {
-                    LineRenderer line = Instantiate(properties.LineRendererPrefabs[connection.Type], transform);
-                    line.SetPosition(0, node.transform.position);
-                    line.SetPosition(1, Vector3.Scale(connection.To.FlatPosition, properties.SpacingMod));
-            
-                    lines.Add(line);
+                    AddLine(properties.ConnectionPrefabs[connection.Type], connection);
                 }
             }
         }
-        
+
         public void ClearMap()
         {
             foreach (MapViewNode mapNodeObject in mapNodeObjects)
@@ -115,12 +108,20 @@ namespace ProjectCatch.Gameplay.Maps.MapViews
 
             mapNodeObjects.Clear();
 
-            foreach (LineRenderer line in lines)
+            foreach (MapViewConnection line in lines)
             {
                 DestroyImmediate(line.gameObject);
             }
 
             lines.Clear();
+        }
+
+        private void AddLine(MapViewConnection prefab, MapConnection connection)
+        {
+            MapViewConnection line = Instantiate(prefab, transform);
+            line.Initialize(connection, properties.SpacingMod);
+            
+            lines.Add(line);
         }
 
         private void Select()

@@ -21,8 +21,8 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  size: {x: 3, y: 6}
-  lines: 3
+  size: {x: 3, y: 5}
+  lines: 4
   splitChance: 1
   splitAttempts: 5
   incrementMax: {x: 1, y: 1}

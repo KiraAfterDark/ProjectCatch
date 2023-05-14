@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using ProjectCatch.Gameplay.Maps.MapViews.Connections;
 using ProjectCatch.Gameplay.Maps.MapViews.Nodes;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -22,10 +23,10 @@ namespace ProjectCatch.Gameplay.Maps.MapViews
         public MapViewNode CurrentNodePrefab => currentNodePrefab;
 
         [SerializeField]
-        private Dictionary<MapConnectionType, LineRenderer> lineRendererPrefabs =
-            new Dictionary<MapConnectionType, LineRenderer>();
+        private Dictionary<MapConnectionType, MapViewConnection> connectionPrefabs =
+            new Dictionary<MapConnectionType, MapViewConnection>();
 
-        public Dictionary<MapConnectionType, LineRenderer> LineRendererPrefabs => lineRendererPrefabs;
+        public Dictionary<MapConnectionType, MapViewConnection> ConnectionPrefabs => connectionPrefabs;
 
         [SerializeField]
         private Vector3 spacingMod = Vector2.one;
