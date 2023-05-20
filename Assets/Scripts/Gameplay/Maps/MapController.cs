@@ -6,6 +6,7 @@ using ProjectCatch.Gameplay.Maps.MapViews.Nodes;
 using ProjectCatch.Input;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace ProjectCatch.Gameplay.Maps
 {
@@ -24,12 +25,13 @@ namespace ProjectCatch.Gameplay.Maps
         [SerializeField]
         private float encounterRate = 0.2f;
 
+        [FormerlySerializedAs("mapCharacterPrefab")]
         [Title("Map Character")]
 
         [SerializeField]
-        private MapCharacter mapCharacterPrefab;
+        private MapTrainer mapTrainerPrefab;
 
-        private MapCharacter mapCharacter;
+        private MapTrainer mapTrainer;
 
         // Input
         private PlayerInput playerInput;
@@ -45,8 +47,8 @@ namespace ProjectCatch.Gameplay.Maps
 
             currentNode = Map.Start;
             
-            mapCharacter = Instantiate(mapCharacterPrefab, transform);
-            mapCharacter.transform.position = Map.Start.WorldPosition;
+            mapTrainer = Instantiate(mapTrainerPrefab, transform);
+            mapTrainer.transform.position = Map.Start.WorldPosition;
 
             mapView.SetCurrentNode(Map.Start);
         }
@@ -83,9 +85,9 @@ namespace ProjectCatch.Gameplay.Maps
                         Debug.DrawRay(ray.origin, ray.direction * 500, Color.green, 2);
                         MapNode node = mapViewNode.MapNode;
 
-                        if (currentNode.ConnectedTo(node) && mapCharacter.CanMove)
+                        if (currentNode.ConnectedTo(node) && mapTrainer.CanMove)
                         {
-                            mapCharacter.Move(node, FinishMove);
+                            mapTrainer.Move(node, FinishMove);
                             mapView.StopCurrentNode();
                         }
                     }
@@ -97,9 +99,9 @@ namespace ProjectCatch.Gameplay.Maps
         {
             MapNode node = selectedNode.MapNode;
 
-            if (currentNode.ConnectedTo(node) && mapCharacter.CanMove)
+            if (currentNode.ConnectedTo(node) && mapTrainer.CanMove)
             {
-                mapCharacter.Move(node, FinishMove);
+                mapTrainer.Move(node, FinishMove);
                 selectedNode.StopCurrentHighlight();
             }
         }
@@ -112,7 +114,7 @@ namespace ProjectCatch.Gameplay.Maps
                 GameplayController.Instance.GenerateMap();
                 mapView.DrawMap(Map);
                 
-                mapCharacter.transform.position = Map.Start.WorldPosition;
+                mapTrainer.transform.position = Map.Start.WorldPosition;
                 node = Map.Start;
             }
 

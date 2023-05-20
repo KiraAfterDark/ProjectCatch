@@ -9,6 +9,6 @@ namespace ProjectCatch.TrainerBuilders
         [Title("Map Assets")]
         
         [SerializeField]
-        private MapCharacter
+        private MapTrainer
     }
 }

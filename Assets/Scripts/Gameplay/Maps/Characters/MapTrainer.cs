@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 
 namespace ProjectCatch.Gameplay.Maps.Characters
 {
-    public class MapCharacter : MonoBehaviour
+    public class MapTrainer : MonoBehaviour
     {
         [Min(0)]
         [SerializeField]
