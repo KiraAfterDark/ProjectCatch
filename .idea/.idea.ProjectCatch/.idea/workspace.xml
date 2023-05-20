@@ -3,24 +3,85 @@
   <component name="ChangeListManager">
     <list default="true" id="0afdf038-2cdd-4c73-877b-256fa80e1345" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectCatch/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectCatch/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Map/MAP_MapView_Default_CFG.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Map/MAP_MapView_Default_CFG.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Cave_PRB.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Cave_PRB.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Default_PRB.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Default_PRB.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Grass_PRB.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Grass_PRB.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Water_PRB.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Water_PRB.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Waterfall_PRB.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Waterfall_PRB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Trainer Visuals/May.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Trainer Visuals/May/002_May_MESH.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Trainer Visuals/May/002_May_MESH.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Trainer Visuals/May/002_May_SPRT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Trainer Visuals/May/002_May_SPRT.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Trainer Visuals/Red.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Trainer Visuals/Red/001_Red_MSH.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Trainer Visuals/Red/001_Red_MSH.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Trainer Visuals/Red/001_Red_SPRT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Trainer Visuals/Red/001_Red_SPRT.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Trainer Visuals/Trainer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Trainer Visuals/Trainer/000_Trainer_MSH.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Trainer Visuals/Trainer/000_Trainer_MSH.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Trainer Visuals/Trainer/000_Trainer_SPRT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Trainer Visuals/Trainer/000_Trainer_SPRT.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/MAP_MapView_Default_CFG.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/MAP_MapView_Default_CFG.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/LineRender.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/LineRender/MAP_Connection_Cave_PRB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/LineRender/MAP_Connection_Cave_PRB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/LineRender/MAP_Connection_Default_PRB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/LineRender/MAP_Connection_Default_PRB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/LineRender/MAP_Connection_Grass_PRB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/LineRender/MAP_Connection_Grass_PRB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/LineRender/MAP_Connection_Water_PRB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/LineRender/MAP_Connection_Water_PRB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/LineRender/MAP_Connection_Waterfall_PRB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/LineRender/MAP_Connection_Waterfall_PRB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Shapes_Cave_PFB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Shapes_Cave_PFB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Shapes_Default_PFB Variant 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Shapes_Default_PFB Variant 1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Shapes_Default_PFB Variant 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Shapes_Default_PFB Variant 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Shapes_Default_PFB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Shapes_Default_PFB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Shapes_Grass_PFB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Shapes_Grass_PFB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Shapes_Water_PFB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Shapes_Water_PFB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Shapes_Waterfall_PFB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Connections/MAP_Connection_Shapes_Waterfall_PFB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/MAP_MapView_PRB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/MAP_MapView_PRB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Nodes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Nodes/MAP_Node_Base_PRB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Nodes/MAP_Node_Base_PRB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Nodes/MAP_Node_Item_PRB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Nodes/MAP_Node_Item_PRB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Nodes/MAP_Node_Random_PRB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Nodes/MAP_Node_Random_PRB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Nodes/MAP_Node_Selected_PRB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Nodes/MAP_Node_Selected_PRB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Nodes/MAP_Node_Trade_PRB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Nodes/MAP_Node_Trade_PRB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Nodes/MAP_Node_Trainer_PRB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Nodes/MAP_Node_Trainer_PRB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Nodes/MAP_Node_Unknown_PRB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Nodes/MAP_Node_Unknown_PRB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Nodes/MAP_Node_Wild_PRB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Map/Prefabs/Nodes/MAP_Node_Wild_PRB.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Debugging/MapDebugging.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Debugging/MapDebugging.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game/Game_SCN.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game/Game_SCN.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game/Maps/Map_SCN.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game/Maps/Map_SCN.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/GameplayController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/GameplayController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapDebug.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapDebug.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapViews/Connections/MapViewConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapViews/Connections/MapViewConnection.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapViews/MapView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapViews/MapView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapViews/MapViewProperties.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapViews/MapViewProperties.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Balanced-Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-Balanced-Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity-Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity-Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Performant-Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-Performant-Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapViews/Nodes/MapViewNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Maps/MapViews/Nodes/MapViewNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Ui/GameplayUi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Ui/GameplayUi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +90,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f45a99ffbb9f4d0580258c77e560b3ab16e000/76/a21e6cd0/RangeInt.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f45a99ffbb9f4d0580258c77e560b3ab16e000/b9/470ea69d/Color.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animation/RandomizeTransition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/Cameras/DollyAutoMove.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Battle/Initializer/TrainerBattleInitializer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -133,7 +195,7 @@
       <workItem from="1682876692515" duration="9718000" />
       <workItem from="1682891823707" duration="31000" />
       <workItem from="1683918675193" duration="7848000" />
-      <workItem from="1684065833051" duration="10632000" />
+      <workItem from="1684065833051" duration="21889000" />
     </task>
     <servers />
   </component>

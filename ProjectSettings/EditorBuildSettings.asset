@@ -5,9 +5,27 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/MainMenu_SCN.unity
+    guid: 85f85824ed88cac4b9290cc4c43db281
+  - enabled: 1
+    path: Assets/Scenes/CharacterBuilder_SCN.unity
+    guid: ccf93aae846e7ad4bb1ac0517497d6ed
+  - enabled: 1
+    path: Assets/Scenes/Game/Gameplay_SCN.unity
+    guid: f655af5353b4ac34c8fcacd417e534bd
+  - enabled: 1
+    path: Assets/Scenes/Game/Maps/Map_SCN.unity
+    guid: 23ced1b00661dd94db501511234c774d
+  - enabled: 1
+    path: Assets/Scenes/Game/Battle/Trainer_Battle_SCN.unity
+    guid: 5bcc8e33aa739974ba57bda22c50fb68
+  - enabled: 1
+    path: Assets/Scenes/Game/Battle/Environments/BE_Default_SCN.unity
+    guid: 11c73239a203bbd4f802955344726a18
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 04a9af3b30f0820479ef49d69cb6512a,
       type: 2}

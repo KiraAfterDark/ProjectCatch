@@ -27,10 +27,5 @@ namespace ProjectCatch.Gameplay.Maps.MapViews
             new Dictionary<MapConnectionType, MapViewConnection>();
 
         public Dictionary<MapConnectionType, MapViewConnection> ConnectionPrefabs => connectionPrefabs;
-
-        [SerializeField]
-        private Vector3 spacingMod = Vector2.one;
-
-        public Vector3 SpacingMod => spacingMod;
     }
 }

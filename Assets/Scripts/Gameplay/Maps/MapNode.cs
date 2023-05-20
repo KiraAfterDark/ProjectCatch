@@ -12,10 +12,11 @@ namespace ProjectCatch.Gameplay.Maps
         
         public Vector2Int Position { get; }
 
-        public Vector3 FlatPosition => new Vector3(Position.x, 0, Position.y);
-        public Vector2 VerticalPosition => new Vector2(Position.x, Position.y);
+        public Vector3 WorldPosition => new Vector3(Position.x * worldScalar.x, 0, Position.y * worldScalar.z);
         
         public MapNodeType NodeType { get; }
+
+        private readonly Vector3 worldScalar = new Vector3(2, 0, 5);
 
         public MapNode(Vector2Int position)
         {
@@ -35,7 +36,6 @@ namespace ProjectCatch.Gameplay.Maps
             {
                 if (connection.To == next)
                 {
-                    Debug.LogWarning($"Node ({Position}) already has connection to Node ({next.Position}).");
                     return false;
                 }
             }
@@ -83,6 +83,19 @@ namespace ProjectCatch.Gameplay.Maps
         }
         
         #endregion
+
+        public bool ConnectedTo(MapNode node)
+        {
+            foreach (MapConnection connection in Connections)
+            {
+                if (connection.To == node)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
         
         public override string ToString()
         {

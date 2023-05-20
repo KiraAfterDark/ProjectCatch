@@ -57,7 +57,7 @@ namespace ProjectCatch.Gameplay
         protected override void OnAwake()
         {
             playerTrainerInstance = new TrainerInstance(playerTrainerInstanceData);
-            InitializeMap();
+            GenerateMap();
         }
 
         #region Battle 
@@ -85,11 +85,11 @@ namespace ProjectCatch.Gameplay
 
         #region Map
 
-        private void InitializeMap()
+        public void GenerateMap()
         {
             Map = new Map(mapProperties);
         }
-        
+
         #endregion
     }
 }
