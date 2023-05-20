@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu_SCN.unity
     guid: 85f85824ed88cac4b9290cc4c43db281
   - enabled: 1
-    path: Assets/Scenes/CharacterBuilder_SCN.unity
+    path: Assets/Scenes/TrainerBuilder_SCN.unity
     guid: ccf93aae846e7ad4bb1ac0517497d6ed
   - enabled: 1
     path: Assets/Scenes/Game/Gameplay_SCN.unity
