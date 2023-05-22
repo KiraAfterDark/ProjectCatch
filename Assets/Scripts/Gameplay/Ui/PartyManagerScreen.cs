@@ -29,9 +29,9 @@ namespace ProjectCatch.Gameplay.Ui
 
         protected override void OnAwake()
         {
-            DontDestroyOnLoad(gameObject);
-
             canvas.gameObject.SetActive(false);
+            
+            DontDestroyOnLoad(gameObject);
         }
 
         public void RequestPokemon(List<PokemonInstance> party, BattlePokemon currentPokemon, Action<PokemonInstance> selectCallback, Action cancelCallback)

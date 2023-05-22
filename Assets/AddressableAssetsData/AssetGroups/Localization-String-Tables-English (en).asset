@@ -17,13 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: eac54109803ab2b4fa734d529432edbb
   m_SerializeEntries:
-  - m_GUID: 8ad1694039fc0e74c933c9ae8181c67c
-    m_Address: Battle_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 52b820cd8da7e754ca6ad16e71c23800
     m_Address: Pokemon_en
     m_ReadOnly: 1

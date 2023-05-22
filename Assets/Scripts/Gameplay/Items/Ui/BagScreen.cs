@@ -38,6 +38,8 @@ namespace ProjectCatch.Gameplay.Items.Ui
         protected override void OnAwake()
         {
             canvas.gameObject.SetActive(false);
+            
+            DontDestroyOnLoad(gameObject);
         }
 
         public void RequestItem(Inventory inventory, Action<Item> selectCallback, Action cancelCallback)

@@ -54,10 +54,10 @@ namespace ProjectCatch.Gameplay
 
         #endregion
 
-        protected override void OnAwake()
+        private void Start()
         {
-            playerTrainerInstance = new TrainerInstance(playerTrainerInstanceData);
-            GenerateMap();
+            DontDestroyOnLoad(gameObject);
+            StartRun();
         }
 
         #region Battle 
@@ -90,6 +90,15 @@ namespace ProjectCatch.Gameplay
             Map = new Map(mapProperties);
         }
 
+        #endregion
+        
+        #region Start Run
+
+        private void StartRun()
+        {
+            GameplaySceneManager.Instance.StartCharacterBuilderScene();
+        }
+        
         #endregion
     }
 }

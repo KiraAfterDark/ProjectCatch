@@ -12,8 +12,15 @@ namespace ProjectCatch.Gameplay.Maps
 
         private readonly Dictionary<Vector2Int, MapNode> nodes;
         
-        public Map(MapProperties properties)
+        public Map(MapProperties properties, int seed = -1)
         {
+            if (seed < 0)
+            {
+                seed = Random.Range(1, 999999999);
+            }
+
+            Random.InitState(seed);
+            
             this.properties = properties;
 
             Start = new MapNode(new Vector2Int(0, -1));

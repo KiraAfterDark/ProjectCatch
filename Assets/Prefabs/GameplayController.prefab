@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 234142106377117406}
   - component: {fileID: 234142106377117407}
+  - component: {fileID: 7781024841403790565}
   m_Layer: 0
   m_Name: GameplayController
   m_TagString: Untagged
@@ -50,3 +51,21 @@ MonoBehaviour:
   enemyTrainerInstanceData: {fileID: 11400000, guid: 1d98587a757e88a40a6b0992d4d3dd0a,
     type: 2}
   mapProperties: {fileID: 11400000, guid: 6ea68a7b27a3bb14f96c8447c66f86ee, type: 2}
+--- !u!114 &7781024841403790565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234142106377117392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd85f8707f34122a2cbaab101a614d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trainerBattleScene: {fileID: 102900000, guid: 5bcc8e33aa739974ba57bda22c50fb68,
+    type: 3}
+  wildBattleScene: {fileID: 0}
+  defaultEnvironment: {fileID: 102900000, guid: 11c73239a203bbd4f802955344726a18,
+    type: 3}
+  mapScene: {fileID: 102900000, guid: 23ced1b00661dd94db501511234c774d, type: 3}

@@ -17,13 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 719b07a26abdf3947b777767af7eba00
   m_SerializeEntries:
-  - m_GUID: 963ba3dd3bda13243a56f0c8eed27056
-    m_Address: Battle_ja
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ja
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a7d3c9ce1cf4f3b47b6b6074dd84a28e
     m_Address: Pokemon_ja
     m_ReadOnly: 1
