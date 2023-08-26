@@ -63,6 +63,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fd85f8707f34122a2cbaab101a614d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterBuilderScene: {fileID: 102900000, guid: ccf93aae846e7ad4bb1ac0517497d6ed,
+    type: 3}
   trainerBattleScene: {fileID: 102900000, guid: 5bcc8e33aa739974ba57bda22c50fb68,
     type: 3}
   wildBattleScene: {fileID: 0}
